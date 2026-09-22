@@ -10,6 +10,7 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
 from gallus_decoder_tools.errors import HarnessError
+from gallus_decoder_tools.numbers import _fibonacci_fast, _nth_prime
 
 _FORMATS = (
     "%m/%d/%Y",
@@ -76,6 +77,13 @@ def date_numerology(date: datetime) -> dict:
     dn2 = month + day + year_digit_sum
     dn3 = month + day + year_suffix
     dn4 = month + day + year_prefix + year_suffix
+    steps = {
+        "dn1": " + ".join(digit_text) + f" = {dn1}",
+        "dn2": f"{month} + {day} + {' + '.join(year_text)} = {dn2}",
+        "dn3": f"{month} + {day} + {year_suffix} = {dn3}",
+        "dn4": f"{month} + {day} + {year_prefix} + {year_suffix} = {dn4}",
+    }
+    named = (("DN1", dn1, steps["dn1"]), ("DN2", dn2, steps["dn2"]), ("DN3", dn3, steps["dn3"]), ("DN4", dn4, steps["dn4"]))
     day_of_year = date.timetuple().tm_yday
     days_in_year = 366 if calendar.isleap(year) else 365
     return {
@@ -86,16 +94,27 @@ def date_numerology(date: datetime) -> dict:
         "day_of_year": day_of_year,
         "days_in_year": days_in_year,
         "days_remaining": days_in_year - day_of_year,
+        "month_day_year": f"{month}/{day}/{year}",
+        "day_month_year": f"{day}/{month}/{year}",
+        "joined_month_day_year": int(digit_text),
+        "joined_day_month_year": int(f"{day}{month}{year}"),
         "dn1": dn1,
         "dn2": dn2,
         "dn3": dn3,
         "dn4": dn4,
-        "steps": {
-            "dn1": " + ".join(digit_text) + f" = {dn1}",
-            "dn2": f"{month} + {day} + {' + '.join(year_text)} = {dn2}",
-            "dn3": f"{month} + {day} + {year_suffix} = {dn3}",
-            "dn4": f"{month} + {day} + {year_prefix} + {year_suffix} = {dn4}",
-        },
+        "steps": steps,
+        "breakdown": [
+            {
+                "name": name,
+                "value": value,
+                "steps": step,
+                "prime": _nth_prime(value),
+                "triangular": value * (value + 1) // 2,
+                "fibonacci": _fibonacci_fast(value),
+                "square": value * value,
+            }
+            for name, value, step in named
+        ],
     }
 
 

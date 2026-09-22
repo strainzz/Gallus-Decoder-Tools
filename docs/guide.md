@@ -391,6 +391,12 @@ The month is 9, not 09. In DN2, DN3, and DN4 the day stays whole, so 11 is eleve
 
 `steps` writes the addition, for example `9 + 1 + 1 + 2 + 0 + 2 + 6 = 21`. The span uses the dates you named. `--include-end` changes the day count only. It does not move the end date's numerology to the next day.
 
+`breakdown` repeats DN1 through DN4. For each value it gives the prime, triangular number, and Fibonacci number at that count, plus the square of the value. For 21, the 21st prime is 73 and the 21st triangular number is 231.
+
+`month_day_year` is `9/11/2026`. `day_month_year` is `11/9/2026`. `joined_month_day_year` is 9112026. `joined_day_month_year` is 1192026. Those joined numbers are the digits set side by side, not a sum.
+
+The month name and the weekday are words. Pass them to `decode` if you want their cipher totals. Span does not score those words.
+
 A date the parser cannot read is rejected. The error names the text and the writings to use.
 
 ## JSON requests

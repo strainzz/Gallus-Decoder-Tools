@@ -491,7 +491,13 @@ Each date also gets four date numbers. September 11, 2026 is the check:
 | DN3 | Month, day, and the last two year digits: 9 + 11 + 26 | 46 |
 | DN4 | Month, day, first two year digits, and last two: 9 + 11 + 20 + 26 | 66 |
 
-September 11, 2026 is day 254 of the year. 111 days are left after that date. The span result gives this breakdown for the start date and the end date. The written addition is in `steps`, so you can check the tool.
+September 11, 2026 is day 254 of the year. 111 days are left after that date. The span result gives this breakdown for the start date and the end date. The written addition is in `steps`.
+
+Each of those four numbers also gets its own small breakdown: the prime at that count, the triangular number at that count, the Fibonacci number at that count, and the square. For DN1, 21, the 21st prime is 73, the 21st triangular number is 231, and 21 times 21 is 441.
+
+The date is also written both ways. September 11, 2026 is `9/11/2026` and `11/9/2026`. Placing the digits side by side gives 9112026 and 1192026. That is not addition.
+
+To score the month name or the weekday, pass that word to `decode`. This result does not do that for you.
 
 Dates can be `01/01/2020`, `2020-01-01`, or `September 22, 2026`. A slash date is month, then day. If the first number is greater than 12, as in `31/01/2020`, it is read as day, then month. Put the later date first and the tool swaps them and tells you it did.
 

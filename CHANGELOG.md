@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.8: 2026-09-22
+
+Cipher notes on the front page now say the rule in everyday words, with one example you can check on the grid.
+
 ## 0.1.7: 2026-09-22
 
 Cipher grids on the front page read across the alphabet, A through M and then N through Z.

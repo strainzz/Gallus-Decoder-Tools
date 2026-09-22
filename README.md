@@ -37,9 +37,9 @@ With no extra flags, you get the four everyday ciphers. `DOG` comes back as 26, 
 | Cipher | What it did | Total |
 | --- | --- | --- |
 | English Ordinal | D is 4, O is 15, G is 7 | 26 |
-| Full Reduction | Those letters squashed to one digit each, then added | 17 |
-| Reverse Ordinal | The alphabet counted backward | 55 |
-| Reverse Full Reduction | The backward letters, then squashed to one digit each | 10 |
+| Full Reduction | D is 4, O is 6, G is 7 | 17 |
+| Reverse Ordinal | D is 23, O is 12, G is 20 | 55 |
+| Reverse Full Reduction | D is 5, O is 3, G is 2 | 10 |
 
 Pick one cipher, or several, by code.
 
@@ -53,13 +53,13 @@ gallus-decoder-tools decode "DOG" --all
 
 For the four everyday ciphers, capitals and small letters are the same letter. Hebrew and the capital ciphers care about case. That is called out under each of those codes.
 
-The word **reverse** means the alphabet chart is flipped. It does not mean you flip the digits of the finished total.
+Reverse means you start at Z and count back toward A. It does not mean you flip the digits of the answer.
 
 ## The four ciphers to learn first
 
 ### EO: English Ordinal
 
-The ordinary alphabet count. A is 1, B is 2, C is 3, and Z is 26. If you learn one cipher, learn this one.
+Count the alphabet. A is 1. B is 2. Z is 26. Find each letter in the grid and add the numbers under them.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -71,7 +71,7 @@ The ordinary alphabet count. A is 1, B is 2, C is 3, and Z is 26. If you learn o
 
 ### FR: Full Reduction
 
-Take each English Ordinal number and squash it to a single digit, then add those digits. S is 19, which becomes 1. You add the letter digits. You do not squash the finished total again. `DOG` is 17 in Full Reduction. Turning 17 into 8 is a separate step. Say so if you do it.
+Same letters as English Ordinal, but every number is one digit. If a number has two digits, add those digits. 10 becomes 1. 19 becomes 1 + 9 = 10, then 1 + 0 = 1. S is 1. Add the letters and stop. `DOG` is 4 + 6 + 7 = 17. Do not add 1 + 7 unless you say you are doing that extra step.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -83,7 +83,7 @@ Take each English Ordinal number and squash it to a single digit, then add those
 
 ### RO: Reverse Ordinal
 
-Count the alphabet from the other end. A is 26 and Z is 1.
+Count the alphabet from the end. Z is 1. Y is 2. A is 26. `DOG` is 23 + 12 + 20 = 55.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -95,7 +95,7 @@ Count the alphabet from the other end. A is 26 and Z is 1.
 
 ### RFR: Reverse Full Reduction
 
-Start from that backward chart, squash each letter to one digit, then add.
+Start with Reverse Ordinal. Then make each letter one digit. A is 26, and 2 + 6 = 8. `DOG` is 5 + 3 + 2 = 10. Add the letters and stop.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -107,11 +107,11 @@ Start from that backward chart, squash each letter to one digit, then add.
 
 ## Every other cipher
 
-Ask for one with `--ciphers` and its code. The grid under each name is the chart the program adds.
+Ask for one with `--ciphers` and its code. Find the letter in the grid. Add the number under it.
 
 ### SR: Single Reduction
 
-Full Reduction, except S stays 10 instead of becoming 1.
+Same as Full Reduction, but S is 10. In Full Reduction, S is 1. Here you stop at 10. Look at S in the grid.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -123,7 +123,7 @@ Full Reduction, except S stays 10 instead of becoming 1.
 
 ### RSR: Reverse Single Reduction
 
-That chart read backward. The 10 that belonged to S lands on H.
+Single Reduction, written from Z back to A. H is 10. Look at H in the grid.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -135,7 +135,7 @@ That chart read backward. The 10 that belonged to S lands on H.
 
 ### JO: Jewish Ordinal
 
-English letters given the stepped sizes used in Jewish numbering: 1 through 9, then 10, 20, 30, and onward up to 800.
+A through I are 1 through 9. Then the numbers jump. J is 10. K is 20. L is 30. S is 100. Z is 800. Use the number under the letter. No extra math.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -147,7 +147,7 @@ English letters given the stepped sizes used in Jewish numbering: 1 through 9, t
 
 ### JR: Jewish Reduction
 
-Each of those values squashed to one digit. On this alphabet the chart matches Full Reduction, so the totals match `FR`.
+Jewish Ordinal, with every number made into one digit. 10 becomes 1. 20 becomes 2. 100 becomes 1. The grid matches Full Reduction, so the total matches `FR`.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -159,7 +159,7 @@ Each of those values squashed to one digit. On this alphabet the chart matches F
 
 ### CH: Chaldean
 
-A Chaldean letter chart. Some letters share a number, and no letter is worth 9.
+Look up the letter. Some letters share a number. F and P are both 8. No letter is 9. Use the number under the letter.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -171,7 +171,7 @@ A Chaldean letter chart. Some letters share a number, and no letter is worth 9.
 
 ### SUM: Sumerian
 
-English Ordinal multiplied by 6. A is 6, B is 12, Z is 156.
+The normal A=1 number, times 6. A is 1 times 6, so A is 6. B is 2 times 6, so B is 12. Z is 26 times 6, so Z is 156. Or just use the grid.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -183,7 +183,7 @@ English Ordinal multiplied by 6. A is 6, B is 12, Z is 156.
 
 ### SAT: Satanic
 
-A straight count that starts at 36 for A and ends at 61 for Z.
+A is 36. Each next letter is 1 more. B is 37. C is 38. Z is 61.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -195,7 +195,7 @@ A straight count that starts at 36 for A and ends at 61 for Z.
 
 ### HEB: Hebrew
 
-Case matters. Uppercase letters use a Hebrew-style chart. Lowercase `k` is 10. Uppercase `K` is 20. Every other lowercase letter is missing, so it adds nothing. Type the case you mean.
+Capital letters use the big numbers in the grid. Capital K is 20. Small k is 10. Any other small letter is skipped and adds nothing. `Hello` is only 8, from the capital H. Type the capitals you mean.
 
 Uppercase
 
@@ -207,7 +207,7 @@ Uppercase
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 40 | 50 | 60 | 70 | 80 | 90 | 100 | 200 | 700 | 800 | 300 | 400 | 500 |
 
-Lowercase k is the only lowercase letter on this chart.
+Small k is the only small letter in this grid.
 
 | k |
 | --- |
@@ -215,7 +215,7 @@ Lowercase k is the only lowercase letter on this chart.
 
 ### RSUM: Reverse Sumerian
 
-The backward alphabet, multiplied by 6.
+Reverse Ordinal, times 6. A is 26 in Reverse Ordinal, so A is 26 times 6, which is 156. Z is 6. Or just use the grid.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -227,7 +227,7 @@ The backward alphabet, multiplied by 6.
 
 ### RSAT: Reverse Satanic
 
-The Satanic chart read from the other end. A is 61 and Z is 36.
+Satanic counted from the end. A is 61. B is 60. Z is 36.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -239,7 +239,7 @@ The Satanic chart read from the other end. A is 61 and Z is 36.
 
 ### PRIM: Primes
 
-The first 26 prime numbers, in order. A is 2, B is 3, C is 5, Z is 101. Scoring a word with this cipher is not the same as asking for the 14th prime. That second question is `properties`.
+A is 2. B is 3. C is 5. D is 7. These are prime numbers, in order, one per letter. You do not need to know what a prime is. Use the number under the letter. This is not "the 14th prime." That is the properties command.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -251,7 +251,7 @@ The first 26 prime numbers, in order. A is 2, B is 3, C is 5, Z is 101. Scoring 
 
 ### SQ: Squares
 
-The first 26 square numbers. A is 1×1, B is 2×2, Z is 26×26.
+A is 1 times 1, so 1. B is 2 times 2, so 4. C is 3 times 3, so 9. Z is 26 times 26, so 676. Or just use the grid.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -263,7 +263,7 @@ The first 26 square numbers. A is 1×1, B is 2×2, Z is 26×26.
 
 ### TRI: Trigonal
 
-The first 26 triangular numbers: 1, then 1+2, then 1+2+3, and so on.
+A is 1. B is 1 + 2, so 3. C is 1 + 2 + 3, so 6. Each letter adds the next counting number. Or just use the grid.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -275,7 +275,7 @@ The first 26 triangular numbers: 1, then 1+2, then 1+2+3, and so on.
 
 ### FIB: Fibonacci
 
-Fibonacci numbers placed on the letters, starting at 0 for A. This is a letter chart, not "the 10th Fibonacci number."
+A is 0. B is 1. C is 1. D is 2. E is 3. Each next number is the two before it added: 1 + 2 = 3, then 2 + 3 = 5. Or just use the grid. This is not "the 10th Fibonacci number." That is the properties command.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -287,7 +287,7 @@ Fibonacci numbers placed on the letters, starting at 0 for A. This is a letter c
 
 ### SEP: Septenary
 
-Count 1 through 7, then start over. A is 1, and H is 1 again.
+Count 1, 2, 3, 4, 5, 6, 7, then start at 1 again. A is 1. H is 1. O is 1.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -299,7 +299,7 @@ Count 1 through 7, then start over. A is 1, and H is 1 again.
 
 ### KP: Keypad
 
-The phone keypad. ABC is 2, DEF is 3, and WXYZ is 9.
+Old phone buttons. Letters on the same button share a number. A, B, and C are 2. D, E, and F are 3. W, X, Y, and Z are 9.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -311,7 +311,7 @@ The phone keypad. ABC is 2, DEF is 3, and WXYZ is 9.
 
 ### RPRIM: Reverse Primes
 
-The prime chart read from Z back toward A.
+The prime list, flipped. Z is 2. Y is 3. A is 101. Use the number under the letter.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -323,7 +323,7 @@ The prime chart read from Z back toward A.
 
 ### RSQ: Reverse Squares
 
-The square chart read backward.
+The square list, flipped. Z is 1. Y is 4. A is 676. Use the number under the letter.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -335,7 +335,7 @@ The square chart read backward.
 
 ### RTRI: Reverse Trigonal
 
-The trigonal chart read backward.
+The trigonal list, flipped. Z is 1. Y is 3. A is 351. Use the number under the letter.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -347,7 +347,7 @@ The trigonal chart read backward.
 
 ### RFIB: Reverse Fibonacci
 
-The Fibonacci chart read backward.
+The Fibonacci list, flipped. Z is 0. Y is 1. A is 75025. Use the number under the letter.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -359,7 +359,7 @@ The Fibonacci chart read backward.
 
 ### CM: Capitals Mixed, and CA: Capitals Added
 
-Case matters. A capital letter is the ordinary count plus 26, so A is 27. A small letter is the ordinary count, so a is 1. `Ab` is 27 + 2 = 29. These two codes use the same chart. Ask for either name.
+Big letters and small letters are different. Big A is 27. Small a is 1. Big letters are the normal 1 to 26, plus 26. Small letters are the normal 1 to 26. `Ab` is 27 + 2 = 29. `CM` and `CA` use this same grid. Pick either code.
 
 Uppercase
 
@@ -383,7 +383,7 @@ Lowercase
 
 ### RCM: Reverse Capitals Mixed, and RCA: Reverse Capitals Added
 
-That capital chart, read backward. Case still matters. These two codes use the same chart.
+The capital grid above, flipped. Big A is 52. Small a is 26. Big letters and small letters are still different. `RCM` and `RCA` use this same grid. Pick either code.
 
 Uppercase
 
@@ -407,7 +407,7 @@ Lowercase
 
 ### KV: KV Exception
 
-Full Reduction, but K stays 11 and V stays 22.
+Same as Full Reduction, except two letters. K is 11, not 2. V is 22, not 4. Look at K and V in the grid.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -419,7 +419,7 @@ Full Reduction, but K stays 11 and V stays 22.
 
 ### SKV: SKV Exception
 
-Full Reduction, but S stays 10, K stays 11, and V stays 22.
+Same as Full Reduction, except three letters. S is 10, not 1. K is 11, not 2. V is 22, not 4. Look at S, K, and V in the grid.
 
 | A | B | C | D | E | F | G | H | I | J | K | L | M |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -431,7 +431,7 @@ Full Reduction, but S stays 10, K stays 11, and V stays 22.
 
 ### EP: EP Exception, and EHP: EHP Exception
 
-The same chart as Full Reduction. The codes are still here so you can ask for them by name.
+Same numbers as Full Reduction. `EP` and `EHP` both use this grid. The totals match `FR`.
 
 Forgot a code? `gallus-decoder-tools ciphers` prints the menu.
 

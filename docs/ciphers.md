@@ -46,9 +46,7 @@ A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K11 L12 M13 N14 O15 P16 Q17 R18 S19 T20 U21 V22 W
 
 ### FR: Full Reduction
 
-Take each English Ordinal number and squash it to a single digit, then add those digits. 10 becomes 1. 11 becomes 2. 19 becomes 1 + 9 = 10, then 1 + 0 = 1, so S is 1.
-
-You add the letter digits. You do not squash the finished total again. `DOG` is 4 + 6 + 7 = 17. Turning 17 into 8 is a separate digital root. Say so if you do it. It is not the Full Reduction total.
+Same letters as English Ordinal, but every number is one digit. If a number has two digits, add those digits. 10 becomes 1. 19 becomes 1 + 9 = 10, then 1 + 0 = 1. S is 1. Add the letters and stop. `DOG` is 4 + 6 + 7 = 17. Do not add 1 + 7 unless you say you are doing that extra step.
 
 ```text
 A1 B2 C3 D4 E5 F6 G7 H8 I9 J1 K2 L3 M4 N5 O6 P7 Q8 R9 S1 T2 U3 V4 W5 X6 Y7 Z8
@@ -64,7 +62,7 @@ A26 B25 C24 D23 E22 F21 G20 H19 I18 J17 K16 L15 M14 N13 O12 P11 Q10 R9 S8 T7 U6 
 
 ### RFR: Reverse Full Reduction
 
-Start from the backward chart, squash each letter to one digit, then add. `DOG` is 5 + 3 + 2 = 10. As with Full Reduction, leave that 10 as 10 unless you are openly doing a second digital root.
+Start with Reverse Ordinal. Then make each letter one digit. A is 26, and 2 + 6 = 8. `DOG` is 5 + 3 + 2 = 10. Add the letters and stop.
 
 ```text
 A8 B7 C6 D5 E4 F3 G2 H1 I9 J8 K7 L6 M5 N4 O3 P2 Q1 R9 S8 T7 U6 V5 W4 X3 Y2 Z1
@@ -76,7 +74,7 @@ Each one is another letter chart. Ask for it with `--ciphers` and its code. The 
 
 ### SR: Single Reduction
 
-Almost Full Reduction. The one difference is S. In Full Reduction, S is squashed all the way to 1. Here S stops at 10.
+Same as Full Reduction, but S is 10. In Full Reduction, S is 1. Here you stop at 10. Look at S in the grid.
 
 ```text
 A1 B2 C3 D4 E5 F6 G7 H8 I9 J1 K2 L3 M4 N5 O6 P7 Q8 R9 S10 T2 U3 V4 W5 X6 Y7 Z8
@@ -84,7 +82,7 @@ A1 B2 C3 D4 E5 F6 G7 H8 I9 J1 K2 L3 M4 N5 O6 P7 Q8 R9 S10 T2 U3 V4 W5 X6 Y7 Z8
 
 ### RSR: Reverse Single Reduction
 
-The Single Reduction chart read backward. The 10 that belonged to S lands on H, the letter opposite S.
+Single Reduction, written from Z back to A. H is 10. Look at H in the grid.
 
 ```text
 A8 B7 C6 D5 E4 F3 G2 H10 I9 J8 K7 L6 M5 N4 O3 P2 Q1 R9 S8 T7 U6 V5 W4 X3 Y2 Z1
@@ -92,7 +90,7 @@ A8 B7 C6 D5 E4 F3 G2 H10 I9 J8 K7 L6 M5 N4 O3 P2 Q1 R9 S8 T7 U6 V5 W4 X3 Y2 Z1
 
 ### JO: Jewish Ordinal
 
-English letters are given the stepped sizes used in Jewish numbering. The first nine letters are 1 through 9. After that the steps get bigger: 10, 20, 30, and onward up to 800 for Z.
+A through I are 1 through 9. Then the numbers jump. J is 10. K is 20. L is 30. S is 100. Z is 800. Use the number under the letter. No extra math.
 
 ```text
 A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K20 L30 M40 N50 O60 P70 Q80 R90 S100 T200 U300 V400 W500 X600 Y700 Z800
@@ -100,7 +98,7 @@ A1 B2 C3 D4 E5 F6 G7 H8 I9 J10 K20 L30 M40 N50 O60 P70 Q80 R90 S100 T200 U300 V4
 
 ### JR: Jewish Reduction
 
-Each Jewish Ordinal value, squashed to one digit. On this alphabet that chart matches Full Reduction, so a normal phrase gets the same total from `JR` and `FR`.
+Jewish Ordinal, with every number made into one digit. 10 becomes 1. 20 becomes 2. 100 becomes 1. The grid matches Full Reduction, so the total matches `FR`.
 
 ```text
 A1 B2 C3 D4 E5 F6 G7 H8 I9 J1 K2 L3 M4 N5 O6 P7 Q8 R9 S1 T2 U3 V4 W5 X6 Y7 Z8
@@ -149,7 +147,7 @@ A156 B150 C144 D138 E132 F126 G120 H114 I108 J102 K96 L90 M84 N78 O72 P66 Q60 R5
 
 ### RSAT: Reverse Satanic
 
-The Satanic chart read from the other end. A is 61 and Z is 36.
+Satanic counted from the end. A is 61. B is 60. Z is 36.
 
 ```text
 A61 B60 C59 D58 E57 F56 G55 H54 I53 J52 K51 L50 M49 N48 O47 P46 Q45 R44 S43 T42 U41 V40 W39 X38 Y37 Z36
@@ -205,7 +203,7 @@ A2 B2 C2 D3 E3 F3 G4 H4 I4 J5 K5 L5 M6 N6 O6 P7 Q7 R7 S7 T8 U8 V8 W9 X9 Y9 Z9
 
 ### RPRIM: Reverse Primes
 
-The prime chart read from Z back toward A. A is 101 and Z is 2.
+The prime list, flipped. Z is 2. Y is 3. A is 101. Use the number under the letter.
 
 ```text
 A101 B97 C89 D83 E79 F73 G71 H67 I61 J59 K53 L47 M43 N41 O37 P31 Q29 R23 S19 T17 U13 V11 W7 X5 Y3 Z2
@@ -213,7 +211,7 @@ A101 B97 C89 D83 E79 F73 G71 H67 I61 J59 K53 L47 M43 N41 O37 P31 Q29 R23 S19 T17
 
 ### RSQ: Reverse Squares
 
-The square chart read backward. A is 676 and Z is 1.
+The square list, flipped. Z is 1. Y is 4. A is 676. Use the number under the letter.
 
 ```text
 A676 B625 C576 D529 E484 F441 G400 H361 I324 J289 K256 L225 M196 N169 O144 P121 Q100 R81 S64 T49 U36 V25 W16 X9 Y4 Z1
@@ -221,7 +219,7 @@ A676 B625 C576 D529 E484 F441 G400 H361 I324 J289 K256 L225 M196 N169 O144 P121 
 
 ### RTRI: Reverse Trigonal
 
-The trigonal chart read backward. A is 351 and Z is 1.
+The trigonal list, flipped. Z is 1. Y is 3. A is 351. Use the number under the letter.
 
 ```text
 A351 B325 C300 D276 E253 F231 G210 H190 I171 J153 K136 L120 M105 N91 O78 P66 Q55 R45 S36 T28 U21 V15 W10 X6 Y3 Z1
@@ -229,7 +227,7 @@ A351 B325 C300 D276 E253 F231 G210 H190 I171 J153 K136 L120 M105 N91 O78 P66 Q55
 
 ### RFIB: Reverse Fibonacci
 
-The Fibonacci chart read backward. A is 75025 and Z is 0.
+The Fibonacci list, flipped. Z is 0. Y is 1. A is 75025. Use the number under the letter.
 
 ```text
 A75025 B46368 C28657 D17711 E10946 F6765 G4181 H2584 I1597 J987 K610 L377 M233 N144 O89 P55 Q34 R21 S13 T8 U5 V3 W2 X1 Y1 Z0
@@ -263,7 +261,7 @@ a26 b25 c24 d23 e22 f21 g20 h19 i18 j17 k16 l15 m14 n13 o12 p11 q10 r9 s8 t7 u6 
 
 ### KV: KV Exception
 
-Full Reduction, with two letters left unsquashed. K stays 11. V stays 22.
+Same as Full Reduction, except two letters. K is 11, not 2. V is 22, not 4. Look at K and V in the grid.
 
 ```text
 A1 B2 C3 D4 E5 F6 G7 H8 I9 J1 K11 L3 M4 N5 O6 P7 Q8 R9 S1 T2 U3 V22 W5 X6 Y7 Z8
@@ -271,7 +269,7 @@ A1 B2 C3 D4 E5 F6 G7 H8 I9 J1 K11 L3 M4 N5 O6 P7 Q8 R9 S1 T2 U3 V22 W5 X6 Y7 Z8
 
 ### SKV: SKV Exception
 
-Full Reduction, with three letters left unsquashed. S stays 10, K stays 11, and V stays 22.
+Same as Full Reduction, except three letters. S is 10, not 1. K is 11, not 2. V is 22, not 4. Look at S, K, and V in the grid.
 
 ```text
 A1 B2 C3 D4 E5 F6 G7 H8 I9 J1 K11 L3 M4 N5 O6 P7 Q8 R9 S10 T2 U3 V22 W5 X6 Y7 Z8

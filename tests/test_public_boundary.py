@@ -52,11 +52,14 @@ class PresentationTests(unittest.TestCase):
             "disc" + "ord",
             "sc" + "ry",
         )
-        repository = "https://github.com/" + "stra" + "inzz" + "/gallus-decoder-tools"
+        repository = re.compile(
+            "https://github.com/" + "stra" + "inzz" + "/gallus-decoder-tools",
+            re.IGNORECASE,
+        )
         email = re.compile(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}")
         offenders = []
         for path in published_text_files():
-            text = path.read_text(encoding="utf-8").replace(repository, "")
+            text = repository.sub("", path.read_text(encoding="utf-8"))
             lowered = text.lower()
             for word in banned:
                 if word in lowered:

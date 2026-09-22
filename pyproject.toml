@@ -23,10 +23,10 @@ classifiers = [
 dependencies = ["python-dateutil>=2.8"]
 
 [project.urls]
-Homepage = "https://github.com/strainzz/gallus-decoder-tools"
-Repository = "https://github.com/strainzz/gallus-decoder-tools"
-Issues = "https://github.com/strainzz/gallus-decoder-tools/issues"
-Changelog = "https://github.com/strainzz/gallus-decoder-tools/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/strainzz/Gallus-Decoder-Tools"
+Repository = "https://github.com/strainzz/Gallus-Decoder-Tools"
+Issues = "https://github.com/strainzz/Gallus-Decoder-Tools/issues"
+Changelog = "https://github.com/strainzz/Gallus-Decoder-Tools/blob/main/CHANGELOG.md"
 
 [project.scripts]
 gallus-decoder-tools = "gallus_decoder_tools.cli:main"

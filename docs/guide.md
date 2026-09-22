@@ -9,10 +9,16 @@ Copyright 2026 Gallus Labs. Results include the credit `Gallus Decoder Tools by 
 Python 3.11 or newer.
 
 ```bash
+python -m pip install .
+```
+
+That installs the `gallus-decoder-tools` command and the `gallus_decoder_tools` Python package. To work on a checkout instead:
+
+```bash
 python -m pip install -e .
 ```
 
-That installs the `gallus-decoder-tools` command and the `gallus_decoder_tools` Python package. From a checkout, `python -m gallus_decoder_tools` runs the same command with `PYTHONPATH=src` when the package is not installed yet.
+`python -m gallus_decoder_tools` runs the same command.
 
 ## Decode
 

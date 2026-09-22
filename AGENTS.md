@@ -34,4 +34,4 @@ Tool names and field names are in `agent-tools.json`.
 
 ## Working on this repo
 
-Keep the tools pure functions of their inputs. A change to a cipher map, a sequence index, or a span breakdown needs a test that locks the new value. A new cipher also has to appear in the README table. Run `python -m unittest discover -s tests` with `PYTHONPATH=src`.
+Keep the tools pure functions of their inputs. A change to a cipher map, a sequence index, or a span breakdown needs a test that locks the new value. A new cipher also has to appear in `docs/ciphers.md`. Run `python -m unittest discover -s tests` after `python -m pip install -e .`.

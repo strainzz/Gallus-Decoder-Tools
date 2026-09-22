@@ -19,7 +19,7 @@ def published_text_files():
     for path in ROOT.rglob("*"):
         if not path.is_file() or any(part in SKIP for part in path.parts):
             continue
-        if path.suffix.lower() in {".py", ".md", ".toml", ".json"} or path.name in {"LICENSE", "NOTICE"}:
+        if path.suffix.lower() in {".py", ".md", ".toml", ".json", ".yml", ".yaml"} or path.name in {"LICENSE", "NOTICE"}:
             yield path
 
 
@@ -37,6 +37,9 @@ class PresentationTests(unittest.TestCase):
         ciphers = list_ciphers()
         self.assertEqual(len(ciphers), 32)
         self.assertIn("docs/ciphers.md", README)
+        self.assertIn("111", README)
+        workflow = (ROOT / ".github" / "workflows" / "tests.yml").read_text(encoding="utf-8")
+        self.assertIn("python -m unittest discover -s tests", workflow)
         self.assertIn("32 ciphers", CIPHERS)
         for cipher in ciphers:
             self.assertIn(f"| {cipher['code']} | {cipher['name']} |", CIPHERS)

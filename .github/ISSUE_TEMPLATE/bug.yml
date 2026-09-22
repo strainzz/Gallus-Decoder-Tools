@@ -1,0 +1,16 @@
+name: Wrong result or broken command
+description: A total, a date span, or a command did not do what the guide says.
+title: "Bug: "
+body:
+  - type: textarea
+    attributes:
+      label: What happened
+      description: Include the command, the input, and the JSON you got.
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Version
+      description: The version from pyproject.toml, or the commit you ran.
+    validations:
+      required: true

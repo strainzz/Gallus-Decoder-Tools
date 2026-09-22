@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1: 2026-09-22
+
+The front page now says where the sports-decoding setup lives: The Schizo Mathematician Decoder Handbook, for members of the Gallus Labs community. That book is not in this repo.
+
 ## 0.2.0: 2026-09-22
 
 The harness stays free for personal and non-commercial agent workflows. It is not for sale.

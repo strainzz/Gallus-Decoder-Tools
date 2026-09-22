@@ -32,6 +32,12 @@ gallus-decoder-tools span 01/01/2020 09/22/2026
 - [Properties](#properties) checks one number.
 - [Span](#span) counts the days between two dates.
 
+## Get the most out of it
+
+This repo is the calculator. It does the addition. It does not tell you how to set up a sports decode.
+
+That setup is in **The Schizo Mathematician Decoder Handbook**. The handbook is for members of the Gallus Labs community. It shows how to use these tools for sports decoding, and more. It is not included here.
+
 ## Decode
 
 Decode adds up a phrase.

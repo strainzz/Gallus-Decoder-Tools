@@ -8,7 +8,9 @@ This is the manual. The front page is the [README](../README.md). Each cipher ru
 
 Copyright 2026 Gallus Labs. Every result includes the credit `Gallus Decoder Tools by Gallus Labs`.
 
-There are four commands. Each one answers a different question.
+There are four commands. Each one answers a different question. This repo is the calculator. It does not include a sports decode.
+
+**The Schizo Mathematician Decoder Handbook** is for members of the Gallus Labs community. That book shows how to set these tools up for sports decoding, and more. It is not in this repository.
 
 | Command | The question it answers |
 | --- | --- |

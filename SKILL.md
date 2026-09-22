@@ -14,7 +14,7 @@ python -m gallus_decoder_tools run --json '<one json object>'
 Tools:
 
 - `{"tool":"decode","text":"PHRASE"}` uses EO, FR, RO, and RFR. Add `"ciphers":["EO","CH"]` or `"all":true` for every cipher. Commas in `text` separate phrases. Use `"phrases":["a, b"]` when the comma is part of the phrase.
-- `{"tool":"properties","number":28}` accepts integers from 1 through 1000000.
+- `{"tool":"properties","number":28}` accepts integers from 1 through 1000000. Use `arithmetic` for factors, divisors, digital root, and reversal. Use `sequences` for membership and position. Use `indexes` for the term at that position. Do not estimate any of these.
 - `{"tool":"span","start":"01/01/2020","end":"09/22/2026"}` accepts `MM/DD/YYYY`, `YYYY-MM-DD`, or `Month D, YYYY`. Add `"include_end":true` to count the end date.
 - `{"tool":"ciphers"}` lists every cipher code.
 

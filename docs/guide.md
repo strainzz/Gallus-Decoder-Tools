@@ -86,16 +86,42 @@ The JSON for that decode:
 gallus-decoder-tools properties 28
 ```
 
-The input is an integer from 1 through 1,000,000. `28` belongs to three sequences a decoder commonly checks: it is the 7th triangular number, the 4th hexagonal number, and the 2nd perfect number.
+The input is an integer from 1 through 1,000,000. The result has four blocks: `arithmetic`, `sequences`, `indexes`, and `special`.
+
+`28` is the 7th triangular number, the 4th hexagonal number, and the 2nd perfect number. Its aliquot sum is 28, so `abundance` is `perfect`. `110` factors as 2 × 5 × 11 and its digital root is 2.
+
+### Arithmetic
+
+| Field | Meaning |
+| --- | --- |
+| `even` | Whether the number is divisible by 2 |
+| `digit_sum` | The sum of its decimal digits |
+| `digital_root` | That sum reduced to one digit. A multiple of 9 has digital root 9 |
+| `reversed_digits` | The digits in reverse order. `110` becomes `011` |
+| `reversed` | Those reversed digits read as an integer. `011` becomes 11 |
+| `prime_factors` | Prime and exponent pairs. `1` has an empty list |
+| `divisors` | Every positive divisor, in ascending order |
+| `divisor_count` | How many positive divisors |
+| `divisor_sum` | The sum of those divisors |
+| `aliquot_sum` | `divisor_sum` minus the number itself |
+| `abundance` | `perfect` when the aliquot sum equals the number, `abundant` when it is greater, `deficient` when it is smaller |
+
+A prime has exactly two positive divisors. `1` is neither prime nor composite.
+
+### Sequences
 
 `result.sequences` has one entry for each sequence, in this order: prime, composite, triangular, square, fibonacci, hexagonal, perfect, pentagonal, cubic, octagonal, tetrahedral, lucas, catalan, palindromic.
 
 | Field | Meaning |
 | --- | --- |
 | `is` | Whether the number belongs to that sequence |
-| `position` | Its place in the sequence, counting from 1. Absent for a palindrome |
+| `position` | Its place in the sequence, counting from 1. A palindrome has no position |
 
-When a sequence repeats a value, the stored position is the first occurrence. `1` is the 1st Fibonacci number. `2` is the 3rd Catalan number.
+When a sequence repeats a value, the stored position is the first occurrence. `1` is the 1st Fibonacci number. `2` is the 3rd Catalan number. A perfect number is one whose aliquot sum equals the number. The position is its place among the even perfect numbers generated from the Mersenne exponents 2, 3, 5, 7, 13, 17, 19, 31, 61, 89, 107, and 127.
+
+### Indexes
+
+`result.indexes` uses the number as a position and returns that term. The 10th prime is 29, the 10th triangular number is 55, and the 10th Fibonacci number is 55. Fibonacci, Lucas, and Catalan use the same indexing as the sequence positions: the 1st and 2nd Fibonacci numbers are both 1, and the 1st Lucas number is 1. `indexes.perfect` is present for positions 1 through 12 and is null after that list.
 
 `result.special` has four flags: `master`, `sacred`, `jesuit`, and `angelic`.
 

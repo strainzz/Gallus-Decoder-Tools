@@ -24,7 +24,7 @@ Stdout is one JSON object. `ok` is true on success. A rejected request exits 2 w
 ## Request fields
 
 - `decode`: `text` (commas separate phrases) or `phrases` (a list). Optional `ciphers` as a list or comma-separated codes. Optional `all`. Default ciphers are `EO`, `FR`, `RO`, `RFR`. `--all` uses every cipher in `docs/ciphers.md`.
-- `properties`: `number`, an integer from 1 through 1000000.
+- `properties`: `number`, an integer from 1 through 1000000. Read `arithmetic`, `sequences`, `indexes`, and `special` from the result. The values are calculated. Do not replace them with an estimate.
 - `span`: `start`, `end`, optional `include_end`. Dates are `MM/DD/YYYY`, `YYYY-MM-DD`, or `Month D, YYYY`.
 - `ciphers`: no fields. Returns the code list.
 

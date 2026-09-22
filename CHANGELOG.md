@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.1 — 2026-09-22
+
+Number properties now carry the arithmetic and the index term, so a decode can use the calculated value instead of an estimate.
+
+- Prime factorization, positive divisors, divisor sum, aliquot sum, and abundant, perfect, or deficient.
+- Digit sum, digital root, and digit reversal.
+- The sequence term at that position for every decoder sequence, including the prime, composite, Fibonacci, Lucas, Catalan, and the first 12 even perfect numbers.
+
 ## 0.1.0 — 2026-09-22
 
 First public release of Gallus Decoder Tools.

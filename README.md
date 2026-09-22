@@ -26,7 +26,7 @@ gallus-decoder-tools span 01/01/2020 09/22/2026
 | RO | Reverse Ordinal | 78 |
 | RFR | Reverse Full Reduction | 33 |
 
-`28` is the 7th triangular number, the 4th hexagonal number, and the 2nd perfect number. January 1, 2020 through September 22, 2026 is 6 years, 8 months, and 21 days.
+`28` is the 7th triangular number, the 4th hexagonal number, and the 2nd perfect number. The same command returns its factors, digital root, digit reversal, and the sequence term at that position. January 1, 2020 through September 22, 2026 is 6 years, 8 months, and 21 days.
 
 The same decode as JSON:
 
@@ -56,7 +56,7 @@ The same decode as JSON:
 | Tool | Command | You supply | You receive |
 | --- | --- | --- | --- |
 | Decode | `decode "PHRASE"` | A phrase | A total in each selected cipher |
-| Properties | `properties NUMBER` | An integer from 1 to 1,000,000 | Sequence membership, position, and special flags |
+| Properties | `properties NUMBER` | An integer from 1 to 1,000,000 | Factors, digital root, sequence position, and the term at that index |
 | Span | `span START END` | Two calendar dates | Years, months, weeks, days, and the written breakdowns |
 
 A plain decode uses the four everyday ciphers. All 32 ciphers are included. `--all` runs every one. The catalog is [docs/ciphers.md](docs/ciphers.md).

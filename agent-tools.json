@@ -1,7 +1,7 @@
 {
   "name": "gallus-decoder-tools",
   "credit": "Gallus Decoder Tools by Gallus",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "command": ["python", "-m", "gallus_decoder_tools", "run", "--json"],
   "tools": [
     {
@@ -17,7 +17,7 @@
     },
     {
       "name": "number_properties",
-      "description": "Gallus sequence membership, position, and special-number flags for an integer from 1 to 1000000.",
+      "description": "Exact Gallus number math for an integer from 1 to 1000000: prime factorization, divisors, digital root, reversal, sequence position, the term at that index, and the special-number flags.",
       "input": {
         "tool": "properties",
         "number": "Integer from 1 to 1000000."

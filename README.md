@@ -75,6 +75,7 @@ gallus-decoder-tools run --json "{\"tool\":\"decode\",\"text\":\"New York\",\"al
 
 | | |
 | --- | --- |
+| Source | https://github.com/strainzz/gallus-decoder-tools |
 | Copyright | Copyright 2026 Gallus Labs |
 | Required credit | Gallus Decoder Tools by Gallus |
 | License | [Apache License 2.0](LICENSE) |

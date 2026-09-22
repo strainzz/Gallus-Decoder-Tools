@@ -52,6 +52,29 @@ class DateSpanTests(unittest.TestCase):
         self.assertEqual((result["years"], result["months"], result["days"]), (delta.years, delta.months, delta.days))
         self.assertEqual(result["total_days"], (end - start).days)
 
+    def test_date_numerology_for_both_ends(self) -> None:
+        result = date_span("09/11/2026", "09/11/2026")
+        start = result["numerology"]["start"]
+        self.assertEqual(start["dn1"], 21)
+        self.assertEqual(start["dn2"], 30)
+        self.assertEqual(start["dn3"], 46)
+        self.assertEqual(start["dn4"], 66)
+        self.assertEqual(start["steps"]["dn1"], "9 + 1 + 1 + 2 + 0 + 2 + 6 = 21")
+        self.assertEqual(start["steps"]["dn2"], "9 + 11 + 2 + 0 + 2 + 6 = 30")
+        self.assertEqual(start["steps"]["dn3"], "9 + 11 + 26 = 46")
+        self.assertEqual(start["steps"]["dn4"], "9 + 11 + 20 + 26 = 66")
+        self.assertEqual(start["day_of_year"], 254)
+        self.assertEqual(start["days_remaining"], 111)
+        self.assertEqual(result["numerology"]["end"]["dn1"], 21)
+
+        september_10 = date_span("2026-09-10", "2026-09-10")["numerology"]["start"]
+        self.assertEqual(
+            [september_10[key] for key in ("dn1", "dn2", "dn3", "dn4")],
+            [20, 29, 45, 65],
+        )
+        self.assertEqual(september_10["day_of_year"], 253)
+        self.assertEqual(september_10["days_remaining"], 112)
+
     def test_bad_date(self) -> None:
         with self.assertRaises(HarnessError):
             date_span("tomorrow", "2020-01-01")

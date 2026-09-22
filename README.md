@@ -482,6 +482,17 @@ gallus-decoder-tools span 01/01/2020 09/22/2026
 
 January 1, 2020 through September 22, 2026 is 6 years, 8 months, and 21 days. You also get that length in weeks, and as a share of a century.
 
+Each date also gets four date numbers. September 11, 2026 is the check:
+
+| Number | What you add | Total |
+| --- | --- | --- |
+| DN1 | Every digit: 9 + 1 + 1 + 2 + 0 + 2 + 6 | 21 |
+| DN2 | Month, day, and each year digit: 9 + 11 + 2 + 0 + 2 + 6 | 30 |
+| DN3 | Month, day, and the last two year digits: 9 + 11 + 26 | 46 |
+| DN4 | Month, day, first two year digits, and last two: 9 + 11 + 20 + 26 | 66 |
+
+September 11, 2026 is day 254 of the year. 111 days are left after that date. The span result gives this breakdown for the start date and the end date. The written addition is in `steps`, so you can check the tool.
+
 Dates can be `01/01/2020`, `2020-01-01`, or `September 22, 2026`. A slash date is month, then day. If the first number is greater than 12, as in `31/01/2020`, it is read as day, then month. Put the later date first and the tool swaps them and tells you it did.
 
 ```bash

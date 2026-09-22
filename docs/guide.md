@@ -374,6 +374,22 @@ January 1, 2020 through September 22, 2026, with the end date excluded:
 | `breakdowns.years_weeks_days` | Years, then the remaining time as weeks and days |
 | `breakdowns.months_days` | The total months, which is years × 12 plus the leftover months, then the leftover days |
 | `breakdowns.weeks_days` | The total weeks and the leftover days |
+| `numerology.start` and `numerology.end` | The date-number breakdown for each calendar date |
+
+Each date has four numbers. September 11, 2026:
+
+| Number | What you add | Total |
+| --- | --- | --- |
+| DN1 | Every digit in the month, day, and year | 9 + 1 + 1 + 2 + 0 + 2 + 6 = 21 |
+| DN2 | The month, the day, and each digit of the year | 9 + 11 + 2 + 0 + 2 + 6 = 30 |
+| DN3 | The month, the day, and the last two year digits as one number | 9 + 11 + 26 = 46 |
+| DN4 | The month, the day, the first two year digits, and the last two | 9 + 11 + 20 + 26 = 66 |
+
+The month is 9, not 09. In DN2, DN3, and DN4 the day stays whole, so 11 is eleven, not 1 and 1. DN1 is the only one that splits every digit.
+
+`day_of_year` counts from January 1 as day 1. September 11, 2026 is day 254. `days_remaining` is the days left after that date. In 2026 that is 111. A leap year uses 366 days.
+
+`steps` writes the addition, for example `9 + 1 + 1 + 2 + 0 + 2 + 6 = 21`. The span uses the dates you named. `--include-end` changes the day count only. It does not move the end date's numerology to the next day.
 
 A date the parser cannot read is rejected. The error names the text and the writings to use.
 

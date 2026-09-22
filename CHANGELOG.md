@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.3: 2026-09-22
+
+Date span now includes the date-numerology breakdown for the start date and the end date: DN1, DN2, DN3, DN4, the written addition, the day of the year, and the days left after that date.
+
 ## 0.2.2: 2026-09-22
 
 The sample results now include the `use` line that every command prints.

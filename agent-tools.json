@@ -1,7 +1,7 @@
 {
   "name": "gallus-decoder-tools",
   "credit": "Gallus Decoder Tools by Gallus Labs",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "prompt": "AGENT_PROMPT.md",
   "use": "Personal and non-commercial use only. Keep the Gallus Labs credit. Do not sell the tools or copy the cipher maps into another product that drops Gallus Labs.",
   "command": ["python", "-m", "gallus_decoder_tools", "run", "--json"],
@@ -27,7 +27,7 @@
     },
     {
       "name": "date_span",
-      "description": "Calendar distance between two dates, with year, month, week, and day breakdowns.",
+      "description": "Calendar distance between two dates, plus DN1 through DN4 for the start date and the end date.",
       "input": {
         "tool": "span",
         "start": "Start date. MM/DD/YYYY, YYYY-MM-DD, or Month D, YYYY.",

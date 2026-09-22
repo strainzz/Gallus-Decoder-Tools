@@ -4,6 +4,7 @@
 
 from __future__ import annotations
 
+import calendar
 from datetime import datetime, timedelta
 
 from dateutil.relativedelta import relativedelta
@@ -55,6 +56,47 @@ def parse_date(value: object) -> datetime:
     raise HarnessError(
         f"Could not parse date: {text}. Use MM/DD/YYYY, YYYY-MM-DD, or Month D, YYYY."
     )
+
+
+def date_numerology(date: datetime) -> dict:
+    """Return DN1 through DN4 for one calendar date.
+
+    DN1 adds every digit in the month, day, and year.
+    DN2 keeps the month and day whole, then adds the year digits.
+    DN3 adds the month, the day, and the last two year digits as one number.
+    DN4 adds the month, the day, the first two year digits, and the last two.
+    """
+    month, day, year = date.month, date.day, date.year
+    year_text = str(year)
+    year_prefix = int(year_text[:2])
+    year_suffix = int(year_text[2:])
+    digit_text = f"{month}{day}{year}"
+    year_digit_sum = sum(int(digit) for digit in year_text)
+    dn1 = sum(int(digit) for digit in digit_text)
+    dn2 = month + day + year_digit_sum
+    dn3 = month + day + year_suffix
+    dn4 = month + day + year_prefix + year_suffix
+    day_of_year = date.timetuple().tm_yday
+    days_in_year = 366 if calendar.isleap(year) else 365
+    return {
+        "date": date.strftime("%Y-%m-%d"),
+        "month": month,
+        "day": day,
+        "year": year,
+        "day_of_year": day_of_year,
+        "days_in_year": days_in_year,
+        "days_remaining": days_in_year - day_of_year,
+        "dn1": dn1,
+        "dn2": dn2,
+        "dn3": dn3,
+        "dn4": dn4,
+        "steps": {
+            "dn1": " + ".join(digit_text) + f" = {dn1}",
+            "dn2": f"{month} + {day} + {' + '.join(year_text)} = {dn2}",
+            "dn3": f"{month} + {day} + {year_suffix} = {dn3}",
+            "dn4": f"{month} + {day} + {year_prefix} + {year_suffix} = {dn4}",
+        },
+    }
 
 
 def _parse_include_end(value: object) -> bool:
@@ -136,5 +178,9 @@ def date_span(start: object, end: object, include_end: object = False) -> dict:
             ),
             "months_days": f"{_plural(total_months, 'Month')}, {_plural(days, 'Day')}",
             "weeks_days": f"{_plural(total_weeks, 'Week')}, {_plural(extra_days, 'Day')}",
+        },
+        "numerology": {
+            "start": date_numerology(start_date),
+            "end": date_numerology(end_date),
         },
     }

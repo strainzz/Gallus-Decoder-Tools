@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/brand/GallusLogo.png" alt="Gallus" width="72">
+</p>
+
 # Security
 
 Gallus Decoder Tools calculates on the machine where it is installed. It does not take a key, hold an account, or call a network.

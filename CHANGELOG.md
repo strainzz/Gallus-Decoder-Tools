@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.2 — 2026-09-22
+
+The public pages now carry the Gallus mark, and each command has a complete field guide.
+
+- The Gallus logo and the Gallus Labs lockup are in `docs/brand`.
+- The guide documents `decode`, `ciphers`, `properties`, and `span`, including a worked result for each.
+- The Gallus logo remains a trademark of Gallus Labs. The Apache License covers the software.
+
 ## 0.1.1 — 2026-09-22
 
 Number properties now carry the arithmetic and the index term, so a decode can use the calculated value instead of an estimate.

@@ -1,3 +1,10 @@
+<p align="center">
+  <img src="docs/brand/GallusLogo.png" alt="Gallus" width="128">
+</p>
+<p align="center">
+  <img src="docs/brand/gallus-labs-lockup.svg" alt="Gallus Labs" width="280">
+</p>
+
 # Gallus Decoder Tools
 
 Gallus Decoder Tools is the local calculator for Gallus decoding. Give it a phrase, a whole number, or two dates. It returns the gematria, the number properties, or the calendar span.
@@ -51,17 +58,26 @@ The same decode as JSON:
 }
 ```
 
-## The three tools
+## The tools
 
 | Tool | Command | You supply | You receive |
 | --- | --- | --- | --- |
 | Decode | `decode "PHRASE"` | A phrase | A total in each selected cipher |
+| Ciphers | `ciphers` | Nothing | Every cipher code and its name |
 | Properties | `properties NUMBER` | An integer from 1 to 1,000,000 | Factors, digital root, sequence position, and the term at that index |
 | Span | `span START END` | Two calendar dates | Years, months, weeks, days, and the written breakdowns |
 
 A plain decode uses the four everyday ciphers. All 32 ciphers are included. `--all` runs every one. The catalog is [docs/ciphers.md](docs/ciphers.md).
 
-Field-by-field instructions, date formats, phrase lists, and the Python API are in [docs/guide.md](docs/guide.md).
+Each tool is documented in full in [docs/guide.md](docs/guide.md): the command, the input rules, every result field, and a worked example. The cipher rules are in [docs/ciphers.md](docs/ciphers.md).
+
+| | |
+| --- | --- |
+| Operating guide | [docs/guide.md](docs/guide.md) |
+| Cipher catalog | [docs/ciphers.md](docs/ciphers.md) |
+| Agent skill | [SKILL.md](SKILL.md) |
+| Agent contract | [AGENTS.md](AGENTS.md) |
+| Tool fields | [agent-tools.json](agent-tools.json) |
 
 ## Agents
 
@@ -81,8 +97,9 @@ gallus-decoder-tools run --json "{\"tool\":\"decode\",\"text\":\"New York\",\"al
 | License | [Apache License 2.0](LICENSE) |
 | Attribution record | [NOTICE](NOTICE) |
 | Changes | [CHANGELOG.md](CHANGELOG.md) |
+| Mark | The Gallus logo is a trademark of Gallus Labs. The Apache License covers the software and does not grant rights in the mark. |
 
-The credit stays on copies, on modified versions, and on results taken from the tools. That retention is part of the Apache License terms for this project.
+The credit stays on copies, on modified versions, and on results taken from the tools. That retention is part of the Apache License terms for this project. The logo files are in [docs/brand](docs/brand).
 
 ## Develop
 

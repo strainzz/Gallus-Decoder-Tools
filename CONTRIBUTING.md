@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/brand/GallusLogo.png" alt="Gallus" width="72">
+</p>
+
 # Contributing
 
 Gallus Decoder Tools is Gallus Labs software. Copyright 2026 Gallus Labs. Changes keep the credit `Gallus Decoder Tools by Gallus` in `NOTICE`, in the license appendix, and in the JSON every command prints.

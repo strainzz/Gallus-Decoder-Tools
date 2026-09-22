@@ -1,0 +1,23 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none" role="img" aria-label="Gallus Labs">
+  <rect width="280" height="64" rx="8" fill="#0A0A0A"/>
+  <defs>
+    <linearGradient id="gll-comb" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF6A00"/>
+      <stop offset="1" stop-color="#FB513D"/>
+    </linearGradient>
+    <linearGradient id="gll-body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E0E0E0"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0,0)">
+    <path d="M22 14 L26 6 L30 12 L34 4 L38 12 L42 6 L46 14 Z" fill="url(#gll-comb)"/>
+    <path d="M18 16 Q18 14 20 14 L48 14 Q52 14 52 18 Q52 26 50 30 Q48 36 42 38 L42 46 Q42 50 38 50 L34 50 Q32 50 32 48 L32 44 L24 44 L24 48 Q24 50 22 50 L18 50 Q14 50 14 46 L14 38 Q14 32 16 26 Q18 20 18 16 Z" fill="url(#gll-body)"/>
+    <path d="M52 22 L60 26 L52 30 Z" fill="#FF6A00"/>
+    <ellipse cx="50" cy="34" rx="3" ry="5" fill="#FB513D"/>
+    <circle cx="44" cy="22" r="2.5" fill="#0A0A0A"/>
+    <circle cx="44.5" cy="21.5" r="0.8" fill="#FFFFFF"/>
+  </g>
+  <text x="76" y="42" font-family="Oswald, 'Arial Black', sans-serif" font-weight="700" font-size="32" letter-spacing="3" fill="#FFFFFF">GALLUS LABS</text>
+</svg>
+

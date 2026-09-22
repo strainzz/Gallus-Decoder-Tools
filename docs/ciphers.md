@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="brand/GallusLogo.png" alt="Gallus" width="72">
+</p>
+
 # Cipher catalog
 
 Gallus Decoder Tools includes 32 ciphers. A plain decode uses the four marked Everyday. `gallus-decoder-tools decode "PHRASE" --all` runs the full catalog. `gallus-decoder-tools ciphers` prints the same codes.

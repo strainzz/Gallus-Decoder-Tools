@@ -1,6 +1,19 @@
+<p align="center">
+  <img src="brand/GallusLogo.png" alt="Gallus" width="72">
+</p>
+
 # Guide
 
-This is the operating guide for Gallus Decoder Tools. The project overview is the [README](../README.md). The cipher catalog is [ciphers.md](ciphers.md).
+This is the operating guide for Gallus Decoder Tools. The project overview is the [README](../README.md). The cipher rules are in [ciphers.md](ciphers.md).
+
+The package has four commands. Each one calculates from the input you give it.
+
+| Command | Section |
+| --- | --- |
+| `decode` | [Decode](#decode) |
+| `ciphers` | [Cipher list](#cipher-list) |
+| `properties` | [Properties](#properties) |
+| `span` | [Span](#span) |
 
 Copyright 2026 Gallus Labs. Results include the credit `Gallus Decoder Tools by Gallus`.
 
@@ -80,6 +93,29 @@ The JSON for that decode:
 | `result.phrases[].text` | The phrase after trimming |
 | `result.phrases[].values[]` | One object per cipher: `code`, `name`, and `value` |
 
+## Cipher list
+
+```bash
+gallus-decoder-tools ciphers
+```
+
+This prints every cipher code and its name, in decoder order. The rules for those codes are the table in [ciphers.md](ciphers.md).
+
+```json
+{
+  "ok": true,
+  "credit": "Gallus Decoder Tools by Gallus",
+  "tool": "ciphers",
+  "result": {
+    "ciphers": [
+      {"code": "EO", "name": "English Ordinal"}
+    ]
+  }
+}
+```
+
+The array contains all 32 ciphers. The object above shows the shape of one entry.
+
 ## Properties
 
 ```bash
@@ -125,6 +161,33 @@ When a sequence repeats a value, the stored position is the first occurrence. `1
 
 `result.special` has four flags: `master`, `sacred`, `jesuit`, and `angelic`.
 
+`110` shows the arithmetic block in full:
+
+```json
+{
+  "number": 110,
+  "arithmetic": {
+    "even": true,
+    "digit_sum": 2,
+    "digital_root": 2,
+    "reversed_digits": "011",
+    "reversed": 11,
+    "prime_factors": [
+      {"prime": 2, "exponent": 1},
+      {"prime": 5, "exponent": 1},
+      {"prime": 11, "exponent": 1}
+    ],
+    "divisors": [1, 2, 5, 10, 11, 22, 55, 110],
+    "divisor_count": 8,
+    "divisor_sum": 216,
+    "aliquot_sum": 106,
+    "abundance": "deficient"
+  }
+}
+```
+
+`sequences`, `indexes`, and `special` are present on the same object. For this number, `indexes.triangular` is 6,105, because the 110th triangular number is 110 × 111 / 2.
+
 ## Span
 
 ```bash
@@ -154,7 +217,35 @@ A slash date is month, day, year. When the first number is greater than 12, it i
 | `years`, `months`, `days` | The calendar breakdown |
 | `weeks`, `extra_days` | The same length as whole weeks plus leftover days |
 | `century_percent`, `millennium_percent` | The length as a share of 36,525 days and of 365,250 days |
-| `breakdowns` | The same spans written as sentences |
+| `breakdowns` | The same spans written as sentences. The keys are `years_days`, `years_months_days`, `years_weeks_days`, `months_days`, and `weeks_days` |
+
+January 1, 2020 through September 22, 2026, with the end date excluded:
+
+```json
+{
+  "start": "2020-01-01",
+  "end": "2026-09-22",
+  "start_display": "January 01, 2020",
+  "end_display": "September 22, 2026",
+  "include_end": false,
+  "reordered": false,
+  "total_days": 2456,
+  "years": 6,
+  "months": 8,
+  "days": 21,
+  "weeks": 350,
+  "extra_days": 6,
+  "century_percent": "6.72%",
+  "millennium_percent": "0.67%",
+  "breakdowns": {
+    "years_days": "6 Years, 264 Days",
+    "years_months_days": "6 Years, 8 Months, 21 Days",
+    "years_weeks_days": "6 Years, 37 Weeks, 5 Days",
+    "months_days": "80 Months, 21 Days",
+    "weeks_days": "350 Weeks, 6 Days"
+  }
+}
+```
 
 ## JSON requests
 

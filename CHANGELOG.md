@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.7: 2026-09-22
+
+Cipher grids on the front page read across the alphabet, A through M and then N through Z.
+
 ## 0.1.6: 2026-09-22
 
 Each cipher on the front page now has its letter grid, taken from the cipher map in the code.

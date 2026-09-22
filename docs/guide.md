@@ -4,20 +4,39 @@
 
 # Guide
 
-This is the manual for Gallus Decoder Tools. The front page is the [README](../README.md). The letter values for every cipher are in [ciphers.md](ciphers.md).
+This is the manual. The front page is the [README](../README.md). What each cipher means, in plain language, is [ciphers.md](ciphers.md).
 
 Copyright 2026 Gallus Labs. Every result includes the credit `Gallus Decoder Tools by Gallus`.
 
-The package calculates four things, and nothing else.
+There are four commands. Each one answers a different question.
 
-| Command | You give it | You get back |
-| --- | --- | --- |
-| [decode](#decode) | A phrase, and optionally the ciphers | One total per cipher |
-| [ciphers](#cipher-list) | Nothing | The 32 codes and names |
-| [properties](#properties) | One integer from 1 to 1,000,000 | Factors, digital root, sequence position, and the term at that index |
-| [span](#span) | Two dates | The calendar distance and the written breakdowns |
+| Command | The question it answers |
+| --- | --- |
+| [decode](#decode) | What do these letters add up to? |
+| [ciphers](#cipher-list) | What are the cipher codes called? |
+| [properties](#properties) | What kind of number is this, and what sits at this position? |
+| [span](#span) | How much time is between these two dates? |
 
-An agent uses the same four calculations through [one JSON request](#json-requests). The Python functions are [the same calculations](#python) without the command wrapper.
+If you are new, run the three lines under [Try these first](#try-these-first). The rest of this page is the full readout: every option, every field, and what a bad input looks like.
+
+## Try these first
+
+Install, then run one command at a time.
+
+```bash
+python -m pip install .
+gallus-decoder-tools decode "DOG"
+gallus-decoder-tools properties 28
+gallus-decoder-tools span 01/01/2020 09/22/2026
+```
+
+`decode "DOG"` looks up each letter in the four everyday ciphers and adds. You get 26, 17, 55, and 10. The cipher page shows the addition.
+
+`properties 28` tells you what 28 is. It is the 7th triangular number, the 4th hexagonal number, and the 2nd perfect number. It also tells you a different fact: what the 28th prime is, what the 28th square is, and so on. Those are not the same question. One asks where 28 sits. The other asks what sits at position 28.
+
+`span` counts the days from the first date to the second. January 1, 2020 through September 22, 2026 is 6 years, 8 months, and 21 days.
+
+`gallus-decoder-tools ciphers` prints the code menu when you want a cipher other than the first four.
 
 ## Install
 
@@ -54,7 +73,7 @@ A finished calculation exits 0. A rejected request exits 2. Show `credit` with a
 
 ## Decode
 
-Decode turns a phrase into gematria totals.
+You type a phrase. The tool looks each letter up in a cipher and adds the values. Start with no flags. You get the four everyday ciphers. Add `--ciphers eo` when you want one. Add `--all` when you want all 32. The plain explanation of each cipher is [ciphers.md](ciphers.md).
 
 ```bash
 gallus-decoder-tools decode "New York"
@@ -124,6 +143,8 @@ An empty phrase, a phrase made only of commas, or a request that names both `--a
 
 ## Cipher list
 
+This is the menu. It does not score a phrase. Run it when you need a code, then use that code in `decode`. The "what is this cipher" page is [ciphers.md](ciphers.md).
+
 ```bash
 gallus-decoder-tools ciphers
 ```
@@ -151,7 +172,11 @@ The command takes no arguments. It returns all 32 ciphers in decoder order. The 
 
 ## Properties
 
-Properties describes one whole number. The accepted range is 1 through 1,000,000. `0`, numbers past 1,000,000, and text that is not an integer are rejected. `1_000` and `28.0` are accepted. `28.5` is not.
+You type one whole number from 1 to 1,000,000. You get four blocks, and the names matter.
+
+`sequences` says what the number **is**. 28 is the 7th triangular number. `indexes` says what sits **at that count**. The 28th prime is a different number from 28. `arithmetic` is the ordinary math: factors, digit sum, digital root, and the digits turned around. `special` is a short list of named sets, such as master numbers.
+
+`0`, anything past 1,000,000, and text that is not a whole number are rejected. `1_000` and `28.0` are accepted. `28.5` is not.
 
 ```bash
 gallus-decoder-tools properties 28
@@ -269,7 +294,7 @@ The 12 perfect numbers are built from the Mersenne prime exponents 2, 3, 5, 7, 1
 
 ## Span
 
-Span measures the calendar distance between two dates.
+You type two dates. The tool tells you how far apart they are, in years, months, weeks, and days. Put the later date first and it swaps them, then says that it did. Add `--include-end` when the end date itself should count as a day. Leave it off and the end date is the fence, not a counted day.
 
 ```bash
 gallus-decoder-tools span 01/01/2020 09/22/2026

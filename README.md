@@ -4,9 +4,13 @@
 
 # Gallus Decoder Tools
 
-Gallus Decoder Tools is the local calculator for Gallus decoding. Give it a phrase, a whole number, or two dates. It returns the gematria, the number properties, or the calendar span.
+Gallus Decoder Tools answers three beginner questions without guessing.
 
-Use it when those figures have to be exact. A person can run the commands while working a decode. An AI agent can call the same commands and report the numbers it was given. The calculation happens on the machine where the package is installed.
+- **Decode** adds up a phrase. `DOG` in the ordinary alphabet is 4 + 15 + 7 = 26.
+- **Properties** says what a number is, and what sits at that count. 28 is the 7th triangular number. The 28th prime is a different fact.
+- **Span** counts the time between two dates.
+
+A cipher is just the rule for the letters. Four rules cover ordinary use. The other 28 are there when you know which one you want. Each rule is explained in plain language in [docs/ciphers.md](docs/ciphers.md).
 
 Copyright 2026 Gallus Labs. Using the tools includes the credit **Gallus Decoder Tools by Gallus**.
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.4 — 2026-09-22
+
+Each cipher and each command now has a plain-language explanation for a first-time reader.
+
+- The cipher catalog says what the rule is, then shows the letters.
+- The guide opens with the question each command answers.
+
 ## 0.1.3 — 2026-09-22
 
 The manual and the cipher catalog are now the full reference.

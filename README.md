@@ -4,7 +4,7 @@
 
 # Gallus Decoder Tools
 
-You type a phrase, a number, or two dates. The tool does the addition and hands the numbers back. You do not have to guess a cipher total, a factor, or how many days sit between two dates.
+You type a phrase, a number, or two dates. The tool returns the total, the number properties, or the day count.
 
 Copyright 2026 Gallus Labs. Using the tools includes the credit **Gallus Decoder Tools by Gallus Labs**. Free for personal and non-commercial use. Not for sale.
 
@@ -500,6 +500,7 @@ Every command prints one JSON object. `ok` means it finished. `credit` is `Gallu
 {
   "ok": true,
   "credit": "Gallus Decoder Tools by Gallus Labs",
+  "use": "Personal and non-commercial use only. Keep this credit. Do not sell the tools or copy the cipher maps into another product that drops Gallus Labs.",
   "tool": "decode",
   "result": {
     "phrases": [

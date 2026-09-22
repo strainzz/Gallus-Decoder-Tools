@@ -72,7 +72,7 @@ Every command prints one JSON object and no other text.
 A finished calculation exits 0. A rejected request exits 2. Show `credit` with any result you pass on.
 
 ```json
-{"ok": false, "credit": "Gallus Decoder Tools by Gallus Labs", "error": "Provide text to decode."}
+{"ok": false, "credit": "Gallus Decoder Tools by Gallus Labs", "use": "Personal and non-commercial use only. Keep this credit. Do not sell the tools or copy the cipher maps into another product that drops Gallus Labs.", "error": "Provide text to decode."}
 ```
 
 ## Decode
@@ -117,6 +117,7 @@ The everyday ciphers, used when you name none, are English Ordinal, Full Reducti
 {
   "ok": true,
   "credit": "Gallus Decoder Tools by Gallus Labs",
+  "use": "Personal and non-commercial use only. Keep this credit. Do not sell the tools or copy the cipher maps into another product that drops Gallus Labs.",
   "tool": "decode",
   "result": {
     "phrases": [
@@ -159,6 +160,7 @@ The command takes no arguments. It returns all 32 ciphers in decoder order. The 
 {
   "ok": true,
   "credit": "Gallus Decoder Tools by Gallus Labs",
+  "use": "Personal and non-commercial use only. Keep this credit. Do not sell the tools or copy the cipher maps into another product that drops Gallus Labs.",
   "tool": "ciphers",
   "result": {
     "ciphers": [

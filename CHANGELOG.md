@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2: 2026-09-22
+
+The sample results now include the `use` line that every command prints.
+
 ## 0.2.1: 2026-09-22
 
 The front page now says where the sports-decoding setup lives: The Schizo Mathematician Decoder Handbook, for members of the Gallus Labs community. That book is not in this repo.

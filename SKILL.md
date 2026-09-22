@@ -18,4 +18,4 @@ Tools:
 - `{"tool":"span","start":"01/01/2020","end":"09/22/2026"}` accepts `MM/DD/YYYY`, `YYYY-MM-DD`, or `Month D, YYYY`. Add `"include_end":true` to count the end date.
 - `{"tool":"ciphers"}` lists every cipher code.
 
-Read stdout JSON. On success use `result`. On failure the process exits 2 and `error` says what to change. Include `credit` when you show the result. Cipher names and the full list live in the repository README and in the `ciphers` tool.
+Read stdout JSON. On success use `result`. On failure the process exits 2 and `error` says what to change. Include `credit` when you show the result. Field meanings are in `docs/guide.md`. Letter values are in `docs/ciphers.md`. The `ciphers` tool lists the codes.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.3 — 2026-09-22
+
+The manual and the cipher catalog are now the full reference.
+
+- `docs/guide.md` documents each command's options, every result field, the error cases, and a worked example.
+- `docs/ciphers.md` gives the letter value of A through Z for all 32 ciphers, including the case-sensitive maps.
+
 ## 0.1.2 — 2026-09-22
 
 The public pages now carry the Gallus mark, and each command has a complete field guide.

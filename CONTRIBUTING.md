@@ -20,7 +20,7 @@ The test run is the check that has to pass. GitHub Actions runs the same command
 ## What a change includes
 
 - A calculation change needs a test that locks the new value.
-- A new or renamed cipher needs a row in [docs/ciphers.md](docs/ciphers.md). The catalog test reads that table.
+- A new or renamed cipher needs a row in the code table in [docs/ciphers.md](docs/ciphers.md) and its letter values in that same catalog. The manual in [docs/guide.md](docs/guide.md) has to stay accurate when a field or an error sentence changes.
 - The public pages stay free of personal contact details. Copyright remains Gallus Labs.
 - The tools stay local. A change calculates from the phrase, number, or dates it was given.
 

@@ -2,7 +2,7 @@
 
 This repository is Gallus Decoder Tools: gematria decode, number properties, and date span. Calculate with the package and return its JSON, including the credit.
 
-Copyright is Gallus Labs. The credit line is `Gallus Decoder Tools by Gallus`. It is required by `NOTICE` under the Apache License 2.0. Leave that line in the JSON, in `NOTICE`, and in the license appendix. The operating guide is `docs/guide.md`. All 32 ciphers are in `docs/ciphers.md`.
+Copyright is Gallus Labs. The credit line is `Gallus Decoder Tools by Gallus`. It is required by `NOTICE` under the Apache License 2.0. Leave that line in the JSON, in `NOTICE`, and in the license appendix. The manual is `docs/guide.md`. The letter values for all 32 ciphers are in `docs/ciphers.md`. Use those documents for field meanings. Do not invent a letter value or a sequence term.
 
 ## Run
 

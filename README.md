@@ -64,9 +64,9 @@ The same decode as JSON:
 | Properties | `properties NUMBER` | An integer from 1 to 1,000,000 | Factors, digital root, sequence position, and the term at that index |
 | Span | `span START END` | Two calendar dates | Years, months, weeks, days, and the written breakdowns |
 
-A plain decode uses the four everyday ciphers. All 32 ciphers are included. `--all` runs every one. The catalog is [docs/ciphers.md](docs/ciphers.md).
+A plain decode uses the four everyday ciphers. All 32 ciphers are included. `--all` runs every one.
 
-Each tool is documented in full in [docs/guide.md](docs/guide.md): the command, the input rules, every result field, and a worked example. The cipher rules are in [docs/ciphers.md](docs/ciphers.md).
+The manual is [docs/guide.md](docs/guide.md). It is the document to read for a command's options, the meaning of every field, the error cases, and a worked result. [docs/ciphers.md](docs/ciphers.md) is the letter book: the rule for each cipher and the value of every letter.
 
 | | |
 | --- | --- |

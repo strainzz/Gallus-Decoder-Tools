@@ -1,12 +1,11 @@
 Gallus Decoder Tools
 Copyright 2026 Gallus Labs
 
-Gallus Decoder Tools is decoder software from Gallus Labs.
+Gallus Decoder Tools by Gallus Labs
 
-Use of this software includes the following attribution. Keep it with the
-software, with modified versions, and with results produced by the tools:
+Free for personal and non-commercial use.
+Not for sale. Not for a paid product or a paid service.
+Do not remove this credit, and do not copy the cipher maps into another tool that drops Gallus Labs.
 
-    Gallus Decoder Tools by Gallus
-
-This NOTICE is part of the Apache License, Version 2.0, for this project.
-Copies and derivative works retain this attribution.
+These terms are in the LICENSE file.
+Versions already published through 0.1.9 remain under the Apache License 2.0 that shipped with those versions.

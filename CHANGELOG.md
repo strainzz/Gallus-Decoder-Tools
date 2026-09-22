@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.0: 2026-09-22
+
+The harness stays free for personal and non-commercial agent workflows. It is not for sale.
+
+- Credit on results is Gallus Decoder Tools by Gallus Labs.
+- The license forbids selling the tools and forbids copying the cipher maps into another product that drops Gallus Labs.
+- `AGENT_PROMPT.md` tells an agent to refuse credit stripping, distillation, and repo flips.
+- No sports decode method is included.
+- Versions through 0.1.9 stay under the Apache License 2.0 already published with those versions.
+
 ## 0.1.9: 2026-09-22
 
 Install steps start from the GitHub link, so a shared page can be cloned and run.
@@ -60,4 +70,4 @@ First public release of Gallus Decoder Tools.
 - Number properties for integers from 1 through 1,000,000.
 - Calendar span between two dates, including the written breakdowns.
 - One JSON command line for a person or an agent.
-- Apache License 2.0. Copyright 2026 Gallus Labs. Use includes the credit Gallus Decoder Tools by Gallus.
+- Apache License 2.0. Copyright 2026 Gallus Labs. Use includes the credit Gallus Decoder Tools by Gallus Labs.

@@ -4,7 +4,7 @@
 
 # Contributing
 
-Gallus Decoder Tools is Gallus Labs software. Copyright 2026 Gallus Labs. Changes keep the credit `Gallus Decoder Tools by Gallus` in `NOTICE`, in the license appendix, and in the JSON every command prints.
+Gallus Decoder Tools is Gallus Labs software. Copyright 2026 Gallus Labs. Changes keep the credit `Gallus Decoder Tools by Gallus Labs` in `NOTICE`, in `LICENSE`, and in the JSON every command prints. Do not add a sports decode method. Do not weaken the no-sale terms.
 
 ## Set up
 

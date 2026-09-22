@@ -6,7 +6,7 @@
 
 You type a phrase, a number, or two dates. The tool does the addition and hands the numbers back. You do not have to guess a cipher total, a factor, or how many days sit between two dates.
 
-Copyright 2026 Gallus Labs. Using the tools includes the credit **Gallus Decoder Tools by Gallus**.
+Copyright 2026 Gallus Labs. Using the tools includes the credit **Gallus Decoder Tools by Gallus Labs**. Free for personal and non-commercial use. Not for sale.
 
 ## Install
 
@@ -486,14 +486,14 @@ gallus-decoder-tools span 01/01/2020 09/22/2026 --include-end
 
 ## What comes back
 
-Every command prints one JSON object. `ok` means it finished. `credit` is `Gallus Decoder Tools by Gallus`. `result` is the calculation. A bad input exits with code 2 and an `error` sentence.
+Every command prints one JSON object. `ok` means it finished. `credit` is `Gallus Decoder Tools by Gallus Labs`. `use` repeats the non-commercial terms. `result` is the calculation. A bad input exits with code 2 and an `error` sentence.
 
 `DOG` with no flags:
 
 ```json
 {
   "ok": true,
-  "credit": "Gallus Decoder Tools by Gallus",
+  "credit": "Gallus Decoder Tools by Gallus Labs",
   "tool": "decode",
   "result": {
     "phrases": [
@@ -530,7 +530,7 @@ gallus-decoder-tools run --json "{\"tool\":\"decode\",\"text\":\"DOG\"}"
 {"tool":"ciphers"}
 ```
 
-Show `credit` with the result. Do not replace a total with an estimate. [SKILL.md](SKILL.md) is the file to drop into an agent skills folder. [AGENTS.md](AGENTS.md) is the contract inside this repository. [agent-tools.json](agent-tools.json) lists the request fields.
+Show `credit` with the result. Do not replace a total with an estimate. An agent that uses these tools follows [AGENT_PROMPT.md](AGENT_PROMPT.md). [SKILL.md](SKILL.md) is the file to drop into an agent skills folder. [AGENTS.md](AGENTS.md) is the contract inside this repository. [agent-tools.json](agent-tools.json) lists the request fields.
 
 ## Credit
 
@@ -538,12 +538,12 @@ Show `credit` with the result. Do not replace a total with an estimate. [SKILL.m
 | --- | --- |
 | Source | https://github.com/strainzz/Gallus-Decoder-Tools |
 | Copyright | Copyright 2026 Gallus Labs |
-| Required credit | Gallus Decoder Tools by Gallus |
-| License | [Apache License 2.0](LICENSE) |
+| Required credit | Gallus Decoder Tools by Gallus Labs |
+| License | [Gallus Labs terms](LICENSE). Free to use. Not for sale. |
 | Attribution | [NOTICE](NOTICE) |
 | Changes | [CHANGELOG.md](CHANGELOG.md) |
 | Mark | The Gallus logo is a trademark of Gallus Labs. The license covers the software and does not grant rights in the mark. |
 
-The credit stays on copies, on modified versions, and on results taken from the tools. The logo is in [docs/brand](docs/brand).
+The credit stays on copies, on changes, and on results. You may not sell the tools or copy the cipher maps into another product that drops Gallus Labs. The logo is in [docs/brand](docs/brand).
 
 To work on the source: `python -m pip install -e .`, then the notes in [CONTRIBUTING.md](CONTRIBUTING.md). A vulnerability goes through a private GitHub security advisory, as described in [SECURITY.md](SECURITY.md).

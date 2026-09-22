@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gallus-decoder-tools"
-version = "0.1.9"
+version = "0.2.0"
 description = "Local Gallus calculators for gematria, number properties, and date span."
 readme = "README.md"
-license = "Apache-2.0"
+license = "LicenseRef-Gallus-Labs-Noncommercial"
 requires-python = ">=3.11"
 authors = [{ name = "Gallus Labs" }]
 classifiers = [

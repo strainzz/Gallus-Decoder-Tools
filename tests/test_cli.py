@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-Gallus-Labs-Noncommercial
 # Copyright 2026 Gallus Labs
 import json
 import unittest
@@ -20,7 +20,8 @@ class CliTests(unittest.TestCase):
         code, payload = self.run_cli(["properties", "28"])
         self.assertEqual(code, 0)
         self.assertTrue(payload["ok"])
-        self.assertEqual(payload["credit"], "Gallus Decoder Tools by Gallus")
+        self.assertEqual(payload["credit"], "Gallus Decoder Tools by Gallus Labs")
+        self.assertIn("non-commercial", payload["use"])
         self.assertEqual(payload["tool"], "properties")
         self.assertEqual(payload["result"]["sequences"]["perfect"]["position"], 2)
 
@@ -40,7 +41,7 @@ class CliTests(unittest.TestCase):
         code, payload = self.run_cli(["run", "--json", '{"tool":"matches"}'])
         self.assertEqual(code, 2)
         self.assertFalse(payload["ok"])
-        self.assertEqual(payload["credit"], "Gallus Decoder Tools by Gallus")
+        self.assertEqual(payload["credit"], "Gallus Decoder Tools by Gallus Labs")
 
     def test_phrases_must_be_a_list(self) -> None:
         with self.assertRaises(HarnessError):

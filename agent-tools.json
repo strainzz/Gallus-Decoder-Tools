@@ -1,7 +1,9 @@
 {
   "name": "gallus-decoder-tools",
-  "credit": "Gallus Decoder Tools by Gallus",
-  "version": "0.1.9",
+  "credit": "Gallus Decoder Tools by Gallus Labs",
+  "version": "0.2.0",
+  "prompt": "AGENT_PROMPT.md",
+  "use": "Personal and non-commercial use only. Keep the Gallus Labs credit. Do not sell the tools or copy the cipher maps into another product that drops Gallus Labs.",
   "command": ["python", "-m", "gallus_decoder_tools", "run", "--json"],
   "tools": [
     {

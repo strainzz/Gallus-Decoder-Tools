@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-Gallus-Labs-Noncommercial
 # Copyright 2026 Gallus Labs
 """Letter maps and the gematria sum for Gallus Decoder Tools."""
 

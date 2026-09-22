@@ -6,7 +6,7 @@
 
 This is the manual. The front page is the [README](../README.md). Each cipher rule is in [ciphers.md](ciphers.md).
 
-Copyright 2026 Gallus Labs. Every result includes the credit `Gallus Decoder Tools by Gallus`.
+Copyright 2026 Gallus Labs. Every result includes the credit `Gallus Decoder Tools by Gallus Labs`.
 
 There are four commands. Each one answers a different question.
 
@@ -62,7 +62,7 @@ Every command prints one JSON object and no other text.
 | Field | Success | Rejected input |
 | --- | --- | --- |
 | `ok` | `true` | `false` |
-| `credit` | `Gallus Decoder Tools by Gallus` | The same credit |
+| `credit` | `Gallus Decoder Tools by Gallus Labs` | The same credit |
 | `tool` | `decode`, `ciphers`, `properties`, or `span` | Omitted |
 | `result` | The calculation | Omitted |
 | `error` | Omitted | The sentence that says what to change |
@@ -70,7 +70,7 @@ Every command prints one JSON object and no other text.
 A finished calculation exits 0. A rejected request exits 2. Show `credit` with any result you pass on.
 
 ```json
-{"ok": false, "credit": "Gallus Decoder Tools by Gallus", "error": "Provide text to decode."}
+{"ok": false, "credit": "Gallus Decoder Tools by Gallus Labs", "error": "Provide text to decode."}
 ```
 
 ## Decode
@@ -114,7 +114,7 @@ The everyday ciphers, used when you name none, are English Ordinal, Full Reducti
 ```json
 {
   "ok": true,
-  "credit": "Gallus Decoder Tools by Gallus",
+  "credit": "Gallus Decoder Tools by Gallus Labs",
   "tool": "decode",
   "result": {
     "phrases": [
@@ -156,7 +156,7 @@ The command takes no arguments. It returns all 32 ciphers in decoder order. The 
 ```json
 {
   "ok": true,
-  "credit": "Gallus Decoder Tools by Gallus",
+  "credit": "Gallus Decoder Tools by Gallus Labs",
   "tool": "ciphers",
   "result": {
     "ciphers": [
@@ -423,14 +423,14 @@ number_properties(28)
 date_span("01/01/2020", "09/22/2026", include_end=False)
 ```
 
-`decode`, `number_properties`, and `date_span` return the object that the command places in `result`. They do not wrap it in `ok` and `credit`. `CREDIT` is `Gallus Decoder Tools by Gallus`. `COPYRIGHT` is `Copyright 2026 Gallus Labs`. Keep both with any result you present. A bad argument raises `gallus_decoder_tools.errors.HarnessError`.
+`decode`, `number_properties`, and `date_span` return the object that the command places in `result`. They do not wrap it in `ok` and `credit`. `CREDIT` is `Gallus Decoder Tools by Gallus Labs`. `COPYRIGHT` is `Copyright 2026 Gallus Labs`. Keep both with any result you present. A bad argument raises `gallus_decoder_tools.errors.HarnessError`.
 
 ## Agents
 
 Copy [SKILL.md](../SKILL.md) into an agent skills folder when the repository is not the agent's workspace. An agent working inside this repository follows [AGENTS.md](../AGENTS.md). The request fields are also listed in [agent-tools.json](../agent-tools.json).
 
-The agent runs the command, reads `result`, and shows `credit`. It does not replace a cipher total, a factor, a sequence position, or a date count with an estimate.
+The agent runs the command, reads `result`, and shows `credit`. It does not replace a cipher total, a factor, a sequence position, or a date count with an estimate. It follows [AGENT_PROMPT.md](../AGENT_PROMPT.md). It does not add a sports decode method.
 
 ## Credit
 
-Copyright 2026 Gallus Labs. Use of these tools includes the credit `Gallus Decoder Tools by Gallus`. That line is kept on copies, on modified versions, and on results taken from the tools. The record is [NOTICE](../NOTICE). The license is the [Apache License 2.0](../LICENSE). The Gallus logo is a trademark of Gallus Labs. The license does not grant rights in the mark.
+Copyright 2026 Gallus Labs. Use of these tools includes the credit `Gallus Decoder Tools by Gallus Labs`. Keep that line on copies, on changes, and on results. The terms are in [LICENSE](../LICENSE) and [NOTICE](../NOTICE). Personal and non-commercial use is allowed. Selling the tools, or copying the cipher maps into another product that drops Gallus Labs, is not. The Gallus logo is a trademark of Gallus Labs. The terms do not grant rights in the mark.

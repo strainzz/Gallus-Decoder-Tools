@@ -1,4 +1,4 @@
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-Gallus-Labs-Noncommercial
 # Copyright 2026 Gallus Labs
 """Command line for Gallus Decoder Tools.
 
@@ -11,7 +11,7 @@ import argparse
 import json
 import sys
 
-from gallus_decoder_tools.credit import CREDIT
+from gallus_decoder_tools.credit import CREDIT, USE
 from gallus_decoder_tools.errors import HarnessError
 from gallus_decoder_tools.gematria import decode, list_ciphers
 from gallus_decoder_tools.numbers import number_properties
@@ -25,11 +25,11 @@ def _emit(payload: dict, code: int = 0) -> int:
 
 
 def _ok(tool: str, result: dict) -> int:
-    return _emit({"ok": True, "credit": CREDIT, "tool": tool, "result": result})
+    return _emit({"ok": True, "credit": CREDIT, "use": USE, "tool": tool, "result": result})
 
 
 def _fail(message: str) -> int:
-    return _emit({"ok": False, "credit": CREDIT, "error": message}, 2)
+    return _emit({"ok": False, "credit": CREDIT, "use": USE, "error": message}, 2)
 
 
 def _as_bool(value: object, field: str) -> bool:

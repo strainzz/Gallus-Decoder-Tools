@@ -34,9 +34,9 @@ gallus-decoder-tools span 01/01/2020 09/22/2026
 
 ## Get the most out of it
 
-This repo is the calculator. It does the addition. It does not tell you how to set up a sports decode.
+This repo is the calculator. It adds a phrase, checks a number, and counts days between two dates.
 
-That setup is in **The Schizo Mathematician Decoder Handbook**. The handbook is for members of the Gallus Labs community. It shows how to use these tools for sports decoding, and more. It is not included here.
+Moon phase, zodiac, weekday-name decodes, and the sports-decoding setup are not in this repo. Paying members use those tools in the Gallus Bot. **The Schizo Mathematician Decoder Handbook** is the member book for that setup. Do not rebuild those tools here.
 
 ## Decode
 
@@ -497,7 +497,7 @@ Each of those four numbers also gets its own small breakdown: the prime at that 
 
 The date is also written both ways. September 11, 2026 is `9/11/2026` and `11/9/2026`. Placing the digits side by side gives 9112026 and 1192026. That is not addition.
 
-To score the month name or the weekday, pass that word to `decode`. This result does not do that for you.
+Moon phase, zodiac, and weekday-name decodes are Gallus Bot tools for paying members. They are not part of this span.
 
 Dates can be `01/01/2020`, `2020-01-01`, or `September 22, 2026`. A slash date is month, then day. If the first number is greater than 12, as in `31/01/2020`, it is read as day, then month. Put the later date first and the tool swaps them and tells you it did.
 

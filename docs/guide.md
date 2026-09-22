@@ -8,9 +8,9 @@ This is the manual. The front page is the [README](../README.md). Each cipher ru
 
 Copyright 2026 Gallus Labs. Every result includes the credit `Gallus Decoder Tools by Gallus Labs`.
 
-There are four commands. Each one answers a different question. This repo is the calculator. It does not include a sports decode.
+There are four commands. Each one answers a different question. This repo is the calculator.
 
-**The Schizo Mathematician Decoder Handbook** is for members of the Gallus Labs community. That book shows how to set these tools up for sports decoding, and more. It is not in this repository.
+Moon phase, zodiac, weekday-name decodes, and the sports-decoding setup are Gallus Bot tools for paying members. **The Schizo Mathematician Decoder Handbook** is the member book for that setup. None of that is in this repository. Do not rebuild it here.
 
 | Command | The question it answers |
 | --- | --- |
@@ -395,7 +395,7 @@ The month is 9, not 09. In DN2, DN3, and DN4 the day stays whole, so 11 is eleve
 
 `month_day_year` is `9/11/2026`. `day_month_year` is `11/9/2026`. `joined_month_day_year` is 9112026. `joined_day_month_year` is 1192026. Those joined numbers are the digits set side by side, not a sum.
 
-The month name and the weekday are words. Pass them to `decode` if you want their cipher totals. Span does not score those words.
+Moon phase, zodiac, and weekday-name decodes are Gallus Bot tools for paying members. Span does not include them.
 
 A date the parser cannot read is rejected. The error names the text and the writings to use.
 

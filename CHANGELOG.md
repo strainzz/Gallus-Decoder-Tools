@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.5: 2026-09-22
+
+Moon phase, zodiac, weekday-name decodes, and the sports-decoding setup are named as Gallus Bot tools for paying members. This repo does not include them and does not tell readers to rebuild them.
+
 ## 0.2.4: 2026-09-22
 
 Each date number on a span now includes its prime, triangular number, Fibonacci number, and square, plus both date writings and the digits placed side by side.

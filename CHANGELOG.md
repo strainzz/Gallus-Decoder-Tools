@@ -1,24 +1,26 @@
 # Changelog
 
-## 0.1.5 — 2026-09-22
+## 0.1.5: 2026-09-22
 
-The front page now explains each tool and each cipher in plain language.
+The front page now explains each tool and each cipher.
 
-## 0.1.4 — 2026-09-22
+Public pages use periods and colons. No em dashes.
 
-Each cipher and each command now has a plain-language explanation for a first-time reader.
+## 0.1.4: 2026-09-22
+
+Each cipher and each command now has a short explanation a new reader can use.
 
 - The cipher catalog says what the rule is, then shows the letters.
 - The guide opens with the question each command answers.
 
-## 0.1.3 — 2026-09-22
+## 0.1.3: 2026-09-22
 
 The manual and the cipher catalog are now the full reference.
 
 - `docs/guide.md` documents each command's options, every result field, the error cases, and a worked example.
 - `docs/ciphers.md` gives the letter value of A through Z for all 32 ciphers, including the case-sensitive maps.
 
-## 0.1.2 — 2026-09-22
+## 0.1.2: 2026-09-22
 
 The public pages now carry the Gallus mark, and each command has a complete field guide.
 
@@ -26,7 +28,7 @@ The public pages now carry the Gallus mark, and each command has a complete fiel
 - The guide documents `decode`, `ciphers`, `properties`, and `span`, including a worked result for each.
 - The Gallus logo remains a trademark of Gallus Labs. The Apache License covers the software.
 
-## 0.1.1 — 2026-09-22
+## 0.1.1: 2026-09-22
 
 Number properties now carry the arithmetic and the index term, so a decode can use the calculated value instead of an estimate.
 
@@ -34,7 +36,7 @@ Number properties now carry the arithmetic and the index term, so a decode can u
 - Digit sum, digital root, and digit reversal.
 - The sequence term at that position for every decoder sequence, including the prime, composite, Fibonacci, Lucas, Catalan, and the first 12 even perfect numbers.
 
-## 0.1.0 — 2026-09-22
+## 0.1.0: 2026-09-22
 
 First public release of Gallus Decoder Tools.
 

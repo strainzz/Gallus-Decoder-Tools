@@ -4,7 +4,7 @@
 
 # Guide
 
-This is the manual. The front page is the [README](../README.md). What each cipher means, in plain language, is [ciphers.md](ciphers.md).
+This is the manual. The front page is the [README](../README.md). Each cipher rule is in [ciphers.md](ciphers.md).
 
 Copyright 2026 Gallus Labs. Every result includes the credit `Gallus Decoder Tools by Gallus`.
 
@@ -17,7 +17,7 @@ There are four commands. Each one answers a different question.
 | [properties](#properties) | What kind of number is this, and what sits at this position? |
 | [span](#span) | How much time is between these two dates? |
 
-If you are new, run the three lines under [Try these first](#try-these-first). The rest of this page is the full readout: every option, every field, and what a bad input looks like.
+Start with the three commands under [Try these first](#try-these-first). The sections after that list every option, every field, and what a bad input looks like.
 
 ## Try these first
 
@@ -32,7 +32,7 @@ gallus-decoder-tools span 01/01/2020 09/22/2026
 
 `decode "DOG"` looks up each letter in the four everyday ciphers and adds. You get 26, 17, 55, and 10. The cipher page shows the addition.
 
-`properties 28` tells you what 28 is. It is the 7th triangular number, the 4th hexagonal number, and the 2nd perfect number. It also tells you a different fact: what the 28th prime is, what the 28th square is, and so on. Those are not the same question. One asks where 28 sits. The other asks what sits at position 28.
+`properties 28` says what 28 is: the 7th triangular number, the 4th hexagonal number, and the 2nd perfect number. It also gives the 28th prime and the 28th square. Where 28 sits, and what sits at 28, are two results.
 
 `span` counts the days from the first date to the second. January 1, 2020 through September 22, 2026 is 6 years, 8 months, and 21 days.
 
@@ -243,11 +243,11 @@ When a sequence repeats a value, `position` is the first occurrence. 1 is the 1s
 | `triangular` | It equals n(n + 1) / 2 for a positive integer n | That n. 28 is 7 |
 | `square` | It equals n² | That n. 121 is 11 |
 | `fibonacci` | It appears in 1, 1, 2, 3, 5, 8, and so on | The first place. The 1st and 2nd terms are both 1 |
-| `hexagonal` | It equals n(2n − 1) | That n. 28 is 4 |
+| `hexagonal` | It equals n(2n - 1) | That n. 28 is 4 |
 | `perfect` | Its aliquot sum equals the number | Its place among the even perfect numbers listed under Indexes. 6 is 1. 28 is 2. 496 is 3. 8128 is 4 |
-| `pentagonal` | It equals n(3n − 1) / 2 | That n |
+| `pentagonal` | It equals n(3n - 1) / 2 | That n |
 | `cubic` | It equals n³ | That n |
-| `octagonal` | It equals n(3n − 2) | That n |
+| `octagonal` | It equals n(3n - 2) | That n |
 | `tetrahedral` | It equals n(n + 1)(n + 2) / 6 | That n |
 | `lucas` | It appears in 1, 3, 4, 7, 11, and so on | The first place. Lucas begins at the 1st term 1. The value 2 is not in this sequence |
 | `catalan` | It appears in 1, 1, 2, 5, 14, and so on | The first place. 2 is the 3rd term |
@@ -266,18 +266,18 @@ When a sequence repeats a value, `position` is the first occurrence. 1 is the 1s
 | `triangular` | n(n + 1) / 2. The 10th is 55. The 110th is 6,105 |
 | `square` | n². The 10th is 100 |
 | `fibonacci` | The nth Fibonacci number, with the 1st and 2nd both equal to 1. The 10th is 55 |
-| `hexagonal` | n(2n − 1) |
-| `pentagonal` | n(3n − 1) / 2 |
+| `hexagonal` | n(2n - 1) |
+| `pentagonal` | n(3n - 1) / 2 |
 | `cubic` | n³ |
-| `octagonal` | n(3n − 2) |
+| `octagonal` | n(3n - 2) |
 | `tetrahedral` | n(n + 1)(n + 2) / 6 |
 | `lucas` | The nth Lucas number, with the 1st equal to 1 and the 2nd equal to 3. The 10th is 123 |
 | `catalan` | The nth Catalan number, with the 1st equal to 1. The 10th is 4,862 |
 | `perfect` | The nth even perfect number, for n from 1 through 12. The 4th is 8,128. The 5th is 33,550,336. Position 13 and after is `null` |
 
-The 12 perfect numbers are built from the Mersenne prime exponents 2, 3, 5, 7, 13, 17, 19, 31, 61, 89, 107, and 127. Each perfect number is 2^(p − 1) × (2^p − 1). The program checks the Mersenne primality with the Lucas-Lehmer test before it emits the term. It does not estimate a 13th perfect number.
+The 12 perfect numbers come from the Mersenne prime exponents 2, 3, 5, 7, 13, 17, 19, 31, 61, 89, 107, and 127. Each one is 2^(p-1) times (2^p-1). The Lucas-Lehmer test has to pass before that term is returned. Position 13 is left blank.
 
-`indexes` still returns the 2nd Fibonacci number as 1. `sequences` records only the first position when you ask whether 1 is a Fibonacci number. Those are different questions.
+`indexes` still returns the 2nd Fibonacci number as 1. `sequences` keeps only the first position when the value is 1.
 
 ### Special flags
 

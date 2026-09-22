@@ -21,9 +21,9 @@ Start with the three commands under [Try these first](#try-these-first). The sec
 
 ## Try these first
 
-Install, then run one command at a time.
-
 ```bash
+git clone https://github.com/strainzz/Gallus-Decoder-Tools.git
+cd Gallus-Decoder-Tools
 python -m pip install .
 gallus-decoder-tools decode "DOG"
 gallus-decoder-tools properties 28
@@ -43,8 +43,10 @@ gallus-decoder-tools span 01/01/2020 09/22/2026
 Python 3.11 or newer. The only dependency is `python-dateutil`.
 
 ```bash
+git clone https://github.com/strainzz/Gallus-Decoder-Tools.git
+cd Gallus-Decoder-Tools
 python -m pip install .
-gallus-decoder-tools decode "New York"
+gallus-decoder-tools decode "DOG"
 ```
 
 `python -m gallus_decoder_tools` is the same program. From a checkout you are editing:

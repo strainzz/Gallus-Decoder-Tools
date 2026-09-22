@@ -13,16 +13,24 @@ Copyright 2026 Gallus Labs. Using the tools includes the credit **Gallus Decoder
 Python 3.11 or newer.
 
 ```bash
+git clone https://github.com/strainzz/Gallus-Decoder-Tools.git
+cd Gallus-Decoder-Tools
 python -m pip install .
 ```
 
-Three commands cover ordinary use.
+If this folder is already open, `python -m pip install .` is enough.
 
 ```bash
 gallus-decoder-tools decode "DOG"
 gallus-decoder-tools properties 28
 gallus-decoder-tools span 01/01/2020 09/22/2026
 ```
+
+- [Decode](#decode) adds a phrase.
+- [The four ciphers](#the-four-ciphers-to-learn-first) are the ones to learn first.
+- [The other ciphers](#every-other-cipher) are the rest, each with its grid.
+- [Properties](#properties) checks one number.
+- [Span](#span) counts the days between two dates.
 
 ## Decode
 

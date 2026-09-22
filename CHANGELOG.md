@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.9: 2026-09-22
+
+Install steps start from the GitHub link, so a shared page can be cloned and run.
+
 ## 0.1.8: 2026-09-22
 
 Cipher notes on the front page now say the rule in everyday words, with one example you can check on the grid.

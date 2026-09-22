@@ -4,7 +4,7 @@
 
 The public pages now carry the Gallus mark, and each command has a complete field guide.
 
-- The Gallus logo and the Gallus Labs lockup are in `docs/brand`.
+- The Gallus logo is in `docs/brand`.
 - The guide documents `decode`, `ciphers`, `properties`, and `span`, including a worked result for each.
 - The Gallus logo remains a trademark of Gallus Labs. The Apache License covers the software.
 

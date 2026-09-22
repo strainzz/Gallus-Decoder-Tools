@@ -1,9 +1,6 @@
 <p align="center">
   <img src="docs/brand/GallusLogo.png" alt="Gallus" width="128">
 </p>
-<p align="center">
-  <img src="docs/brand/gallus-labs-lockup.svg" alt="Gallus Labs" width="280">
-</p>
 
 # Gallus Decoder Tools
 
@@ -99,7 +96,7 @@ gallus-decoder-tools run --json "{\"tool\":\"decode\",\"text\":\"New York\",\"al
 | Changes | [CHANGELOG.md](CHANGELOG.md) |
 | Mark | The Gallus logo is a trademark of Gallus Labs. The Apache License covers the software and does not grant rights in the mark. |
 
-The credit stays on copies, on modified versions, and on results taken from the tools. That retention is part of the Apache License terms for this project. The logo files are in [docs/brand](docs/brand).
+The credit stays on copies, on modified versions, and on results taken from the tools. That retention is part of the Apache License terms for this project. The Gallus logo is in [docs/brand](docs/brand).
 
 ## Develop
 

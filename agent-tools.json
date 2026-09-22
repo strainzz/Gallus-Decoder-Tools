@@ -1,0 +1,44 @@
+{
+  "name": "gallus-decoder-tools",
+  "credit": "Gallus Decoder Tools by Gallus",
+  "version": "0.1.0",
+  "command": ["python", "-m", "gallus_decoder_tools", "run", "--json"],
+  "tools": [
+    {
+      "name": "gematria_decode",
+      "description": "Gallus gematria values for one or more phrases. Defaults to EO, FR, RO, and RFR. Set all to true for every cipher, or ask the ciphers tool for the code list.",
+      "input": {
+        "tool": "decode",
+        "text": "Phrase. Commas separate phrases.",
+        "phrases": "Optional list of phrases. Use this when a phrase contains a comma.",
+        "ciphers": "Optional codes, as a list or a comma-separated string.",
+        "all": "Optional true/false. True uses every cipher."
+      }
+    },
+    {
+      "name": "number_properties",
+      "description": "Gallus sequence membership, position, and special-number flags for an integer from 1 to 1000000.",
+      "input": {
+        "tool": "properties",
+        "number": "Integer from 1 to 1000000."
+      }
+    },
+    {
+      "name": "date_span",
+      "description": "Calendar distance between two dates, with year, month, week, and day breakdowns.",
+      "input": {
+        "tool": "span",
+        "start": "Start date. MM/DD/YYYY, YYYY-MM-DD, or Month D, YYYY.",
+        "end": "End date.",
+        "include_end": "Optional true/false. True counts the end date as one day."
+      }
+    },
+    {
+      "name": "list_ciphers",
+      "description": "List every Gallus Decoder Tools cipher code and name.",
+      "input": {
+        "tool": "ciphers"
+      }
+    }
+  ]
+}

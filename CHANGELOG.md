@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.6: 2026-09-22
+
+Each cipher on the front page now has its letter grid, taken from the cipher map in the code.
+
 ## 0.1.5: 2026-09-22
 
 The front page now explains each tool and each cipher.

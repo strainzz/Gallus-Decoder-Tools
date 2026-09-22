@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.5 — 2026-09-22
+
+The front page now explains each tool and each cipher in plain language.
+
 ## 0.1.4 — 2026-09-22
 
 Each cipher and each command now has a plain-language explanation for a first-time reader.
